@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><assessmentItem adaptive="false" compilerVersion="3.3.2.78" identifier="ITEM_000" playerVersion="1.8.0" timeDependent="false" title="Сабақтың мазмұны">
+<styleDeclaration><link href="../common/mcc_lesson.css" userAgent=".*"/><link href="../common/mcc_toc_page.css" userAgent=".*"/><link href="../common/default.css" userAgent=".*"/></styleDeclaration>
+	<variableProcessing template="default"/>
+		<outcomeDeclaration cardinality="single" identifier="DONE"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DONEHISTORY"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DONECHANGES"/>
+		<outcomeDeclaration cardinality="single" identifier="LASTMISTAKEN"/>
+		<outcomeDeclaration cardinality="single" identifier="CHECKS"/>
+		<outcomeDeclaration cardinality="single" identifier="SHOW_ANSWERS"/>
+		<outcomeDeclaration cardinality="single" identifier="RESET"/>
+		<outcomeDeclaration cardinality="single" identifier="MISTAKES"/>
+	<outcomeDeclaration cardinality="single" identifier="TODO">
+		<defaultValue>
+			<value>0</value>
+		</defaultValue>
+	</outcomeDeclaration>
+		<itemBody>
+
+	<div class="page_title_toc">
+		<div class="pageicon_toc"/>
+		<div class="pagetitle"><info class="report-custom1-content2"/></div>
+	</div>
+	<report class="content-page">
+		<prr>
+			<rd>
+				<simpleText class="content-icon"/>
+			</rd>
+			<rd>
+				<link><info class="report-custom1-content2"/></link>
+			</rd>
+		</prr>
+	</report>
+			</itemBody>
+</assessmentItem>

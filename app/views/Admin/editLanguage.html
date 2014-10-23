@@ -1,0 +1,32 @@
+					<div class="product-tab">
+						<div class="tab-pane" id="make-review">
+							<div class="form-horizontal">
+								#{form @Admin.editLanguage(languageId)}
+									#{ifErrors}
+									    <p class="error">
+									        ${errors[0]}
+									    </p>
+									#{/ifErrors} 
+									<div class="control-group">
+									    <label class="control-label" for="inputName">Ид <span class="text-error">*</span></label>
+									    <div class="controls">
+									      <input type="text" name="languageId" id="inputName" placeholder="1, 2, 3..." value="${languageId}">
+									    </div>
+									</div>
+									<div class="control-group">
+										<label class="control-label" for="inputReview">Название <span class="text-error">*</span></label>
+									    <div class="controls">
+									      <input type="text" name="languageName" id="inputReview" placeholder="ru, kz..." value="${params.languageName}">
+									    </div>
+									</div>
+									
+									<div class="control-group">
+									    <div class="controls">
+									      <button type="submit" class="btn btn-primary" name="submit">Изменить Язык</button>
+									    </div>
+									</div>
+								#{/form}
+							</div>
+						</div>
+					</div>
+

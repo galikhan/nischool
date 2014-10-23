@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><assessmentItem adaptive="false" compilerVersion="3.3.2.78" identifier="ITEM_011" playerVersion="1.8.0" timeDependent="false" title="3-жаттығу">
+<styleDeclaration><link href="../common/mcc_lesson.css" userAgent=".*"/><link href="../common/mcc_activity_page.css" userAgent=".*"/><link href="../common/default.css" userAgent=".*"/><link href="../common/exer.css" userAgent=".*"/></styleDeclaration>
+	<variableProcessing template="default"/>
+		<outcomeDeclaration cardinality="single" identifier="DONE"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DONEHISTORY"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DONECHANGES"/>
+		<outcomeDeclaration cardinality="single" identifier="LASTMISTAKEN"/>
+		<outcomeDeclaration cardinality="single" identifier="CHECKS"/>
+		<outcomeDeclaration cardinality="single" identifier="SHOW_ANSWERS"/>
+		<outcomeDeclaration cardinality="single" identifier="RESET"/>
+		<outcomeDeclaration cardinality="single" identifier="MISTAKES"/>
+	<outcomeDeclaration cardinality="single" identifier="TODO">
+		<defaultValue>
+			<value>6</value>
+		</defaultValue>
+	</outcomeDeclaration>
+
+		<outcomeDeclaration cardinality="single" identifier="DROP_RESPONSE_10-DONE"/>
+		<outcomeDeclaration cardinality="single" identifier="DROP_RESPONSE_10-TODO"/>
+		<outcomeDeclaration cardinality="single" identifier="DROP_RESPONSE_10-LASTCHANGE"/>
+		<outcomeDeclaration cardinality="single" identifier="DROP_RESPONSE_10-PREVIOUS"/>
+		<outcomeDeclaration cardinality="single" identifier="DROP_RESPONSE_10-LASTMISTAKEN"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DROP_RESPONSE_10-DONEHISTORY"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DROP_RESPONSE_10-DONECHANGES"/>
+		<outcomeDeclaration cardinality="single" identifier="DROP_RESPONSE_10-MISTAKES"/>
+				<responseDeclaration cardinality="single" checkMode="default" countMode="single" identifier="DROP_RESPONSE_10">
+					<correctResponse>
+						<value forIndex="0">959679897</value>
+					</correctResponse>
+				</responseDeclaration>
+
+		<outcomeDeclaration cardinality="single" identifier="DROP_RESPONSE_5-DONE"/>
+		<outcomeDeclaration cardinality="single" identifier="DROP_RESPONSE_5-TODO"/>
+		<outcomeDeclaration cardinality="single" identifier="DROP_RESPONSE_5-LASTCHANGE"/>
+		<outcomeDeclaration cardinality="single" identifier="DROP_RESPONSE_5-PREVIOUS"/>
+		<outcomeDeclaration cardinality="single" identifier="DROP_RESPONSE_5-LASTMISTAKEN"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DROP_RESPONSE_5-DONEHISTORY"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DROP_RESPONSE_5-DONECHANGES"/>
+		<outcomeDeclaration cardinality="single" identifier="DROP_RESPONSE_5-MISTAKES"/>
+				<responseDeclaration cardinality="single" checkMode="default" countMode="single" identifier="DROP_RESPONSE_5">
+					<correctResponse>
+						<value forIndex="0">2014072191</value>
+					</correctResponse>
+				</responseDeclaration>
+
+		<outcomeDeclaration cardinality="single" identifier="DROP_RESPONSE_6-DONE"/>
+		<outcomeDeclaration cardinality="single" identifier="DROP_RESPONSE_6-TODO"/>
+		<outcomeDeclaration cardinality="single" identifier="DROP_RESPONSE_6-LASTCHANGE"/>
+		<outcomeDeclaration cardinality="single" identifier="DROP_RESPONSE_6-PREVIOUS"/>
+		<outcomeDeclaration cardinality="single" identifier="DROP_RESPONSE_6-LASTMISTAKEN"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DROP_RESPONSE_6-DONEHISTORY"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DROP_RESPONSE_6-DONECHANGES"/>
+		<outcomeDeclaration cardinality="single" identifier="DROP_RESPONSE_6-MISTAKES"/>
+				<responseDeclaration cardinality="single" checkMode="default" countMode="single" identifier="DROP_RESPONSE_6">
+					<correctResponse>
+						<value forIndex="0">597469921</value>
+					</correctResponse>
+				</responseDeclaration>
+
+		<outcomeDeclaration cardinality="single" identifier="DROP_RESPONSE_7-DONE"/>
+		<outcomeDeclaration cardinality="single" identifier="DROP_RESPONSE_7-TODO"/>
+		<outcomeDeclaration cardinality="single" identifier="DROP_RESPONSE_7-LASTCHANGE"/>
+		<outcomeDeclaration cardinality="single" identifier="DROP_RESPONSE_7-PREVIOUS"/>
+		<outcomeDeclaration cardinality="single" identifier="DROP_RESPONSE_7-LASTMISTAKEN"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DROP_RESPONSE_7-DONEHISTORY"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DROP_RESPONSE_7-DONECHANGES"/>
+		<outcomeDeclaration cardinality="single" identifier="DROP_RESPONSE_7-MISTAKES"/>
+				<responseDeclaration cardinality="single" checkMode="default" countMode="single" identifier="DROP_RESPONSE_7">
+					<correctResponse>
+						<value forIndex="0">-721112947</value>
+					</correctResponse>
+				</responseDeclaration>
+
+		<outcomeDeclaration cardinality="single" identifier="DROP_RESPONSE_8-DONE"/>
+		<outcomeDeclaration cardinality="single" identifier="DROP_RESPONSE_8-TODO"/>
+		<outcomeDeclaration cardinality="single" identifier="DROP_RESPONSE_8-LASTCHANGE"/>
+		<outcomeDeclaration cardinality="single" identifier="DROP_RESPONSE_8-PREVIOUS"/>
+		<outcomeDeclaration cardinality="single" identifier="DROP_RESPONSE_8-LASTMISTAKEN"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DROP_RESPONSE_8-DONEHISTORY"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DROP_RESPONSE_8-DONECHANGES"/>
+		<outcomeDeclaration cardinality="single" identifier="DROP_RESPONSE_8-MISTAKES"/>
+				<responseDeclaration cardinality="single" checkMode="default" countMode="single" identifier="DROP_RESPONSE_8">
+					<correctResponse>
+						<value forIndex="0">1315747994</value>
+					</correctResponse>
+				</responseDeclaration>
+
+		<outcomeDeclaration cardinality="single" identifier="DROP_RESPONSE_9-DONE"/>
+		<outcomeDeclaration cardinality="single" identifier="DROP_RESPONSE_9-TODO"/>
+		<outcomeDeclaration cardinality="single" identifier="DROP_RESPONSE_9-LASTCHANGE"/>
+		<outcomeDeclaration cardinality="single" identifier="DROP_RESPONSE_9-PREVIOUS"/>
+		<outcomeDeclaration cardinality="single" identifier="DROP_RESPONSE_9-LASTMISTAKEN"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DROP_RESPONSE_9-DONEHISTORY"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DROP_RESPONSE_9-DONECHANGES"/>
+		<outcomeDeclaration cardinality="single" identifier="DROP_RESPONSE_9-MISTAKES"/>
+				<responseDeclaration cardinality="single" checkMode="default" countMode="single" identifier="DROP_RESPONSE_9">
+					<correctResponse>
+						<value forIndex="0">-2036273873</value>
+					</correctResponse>
+				</responseDeclaration>
+		<itemBody>
+
+		<div class="mcc_activity_page">
+				<div class="page_title">
+					<div class="pageicon"/>
+					<div class="pagetitle"><info class="report-custom1-content2"/></div>
+       			</div>			
+            <group class="exer" id="dummy1">
+	<div id="activities">
+		<simpleText class="title" id="dummy1_1">
+Сіз тамырдың ішкі құрылысын білесіз бе? Таңдау тізімінен берілген сипаттамаларға сәйкес дұрыс жауап таңдаңыз.</simpleText>
+		<textInteraction id="dummy1_2">
+		<inlineChoiceInteraction responseIdentifier="DROP_RESPONSE_5" shuffle="true">
+			<inlineChoice identifier="2014072191">Ксилема</inlineChoice>
+			<inlineChoice identifier="1315747994">Флоэма</inlineChoice>
+			<inlineChoice identifier="597469921">Перицикл</inlineChoice>
+			<inlineChoice identifier="959679897">Эндодерма</inlineChoice>
+			<inlineChoice identifier="-721112947">Эпидерма</inlineChoice>
+			<inlineChoice identifier="-2036273873">Первичная кора</inlineChoice>
+		</inlineChoiceInteraction><span> – тамыр орталығында орналасқан гетерогенді ұлпа, суды және минералды тұздарды тасымалдайды.
+<br/>
+ 
+<br/>
+ </span>		<inlineChoiceInteraction responseIdentifier="DROP_RESPONSE_6" shuffle="true">
+			<inlineChoice identifier="2014072191">Ксилема</inlineChoice>
+			<inlineChoice identifier="1315747994">Флоэма</inlineChoice>
+			<inlineChoice identifier="597469921">Перицикл</inlineChoice>
+			<inlineChoice identifier="959679897">Эндодерма</inlineChoice>
+			<inlineChoice identifier="-721112947">Эпидерма</inlineChoice>
+			<inlineChoice identifier="-2036273873">Первичная кора</inlineChoice>
+		</inlineChoiceInteraction><span> – стеланы қоршаған паренхима.
+<br/>
+ 
+<br/>
+ </span>		<inlineChoiceInteraction responseIdentifier="DROP_RESPONSE_7" shuffle="true">
+			<inlineChoice identifier="2014072191">Ксилема</inlineChoice>
+			<inlineChoice identifier="1315747994">Флоэма</inlineChoice>
+			<inlineChoice identifier="597469921">Перицикл</inlineChoice>
+			<inlineChoice identifier="959679897">Эндодерма</inlineChoice>
+			<inlineChoice identifier="-721112947">Эпидерма</inlineChoice>
+			<inlineChoice identifier="-2036273873">Первичная кора</inlineChoice>
+		</inlineChoiceInteraction><span> – бастапқы тамыр жасушасының сыртқы қабаты.
+<br/>
+  
+<br/>
+ </span>		<inlineChoiceInteraction responseIdentifier="DROP_RESPONSE_8" shuffle="true">
+			<inlineChoice identifier="2014072191">Ксилема</inlineChoice>
+			<inlineChoice identifier="1315747994">Флоэма</inlineChoice>
+			<inlineChoice identifier="597469921">Перицикл</inlineChoice>
+			<inlineChoice identifier="959679897">Эндодерма</inlineChoice>
+			<inlineChoice identifier="-721112947">Эпидерма</inlineChoice>
+			<inlineChoice identifier="-2036273873">Первичная кора</inlineChoice>
+		</inlineChoiceInteraction><span> – стела ішінде орналасқан ұлпа, еріген қоректік заттарды тасымалдайды.
+<br/>
+ 
+<br/>
+ </span>		<inlineChoiceInteraction responseIdentifier="DROP_RESPONSE_9" shuffle="true">
+			<inlineChoice identifier="2014072191">Ксилема</inlineChoice>
+			<inlineChoice identifier="1315747994">Флоэма</inlineChoice>
+			<inlineChoice identifier="597469921">Перицикл</inlineChoice>
+			<inlineChoice identifier="959679897">Эндодерма</inlineChoice>
+			<inlineChoice identifier="-721112947">Эпидерма</inlineChoice>
+			<inlineChoice identifier="-2036273873">Первичная кора</inlineChoice>
+		</inlineChoiceInteraction><span> –  бұл ұлпа жасушараралық кең кеңістікпен сипатталады, эпидермис астындағы паренхимадан дамиды.
+<br/>
+ 
+<br/>
+ </span>		<inlineChoiceInteraction responseIdentifier="DROP_RESPONSE_10" shuffle="true">
+			<inlineChoice identifier="2014072191">Ксилема</inlineChoice>
+			<inlineChoice identifier="1315747994">Флоэма</inlineChoice>
+			<inlineChoice identifier="597469921">Перицикл</inlineChoice>
+			<inlineChoice identifier="959679897">Эндодерма</inlineChoice>
+			<inlineChoice identifier="-721112947">Эпидерма</inlineChoice>
+			<inlineChoice identifier="-2036273873">Первичная кора</inlineChoice>
+		</inlineChoiceInteraction><span> – бастапқы тамыр жасушасының ішкі қабаты.</span>	<feedbacks>
+		<feedback>
+			<condition>
+				<and>
+		<propertyCondition property="ok"/>
+				</and>
+			</condition>
+		<action>
+			<showText/>
+				<showUrl href="media/ok.mp3" type="narration">
+								<source src="media/ok.mp3" type="audio/mp4"/>
+				</showUrl>
+		</action>
+		</feedback>
+		<feedback>
+			<condition>
+				<and>
+		<propertyCondition property="wrong"/>
+				</and>
+			</condition>
+		<action>
+			<showText/>
+				<showUrl href="media/wrong.mp3" type="narration">
+								<source src="media/wrong.mp3" type="audio/mp4"/>
+				</showUrl>
+		</action>
+		</feedback>
+	</feedbacks>
+</textInteraction>
+		<!-- cannot find module for dummy 'dummy3'!-->
+		<!-- cannot find module for dummy 'dummy4'!-->
+		<!-- cannot find module for dummy 'dummy5'!-->
+		<!-- cannot find module for dummy 'dummy6'!-->
+		<!-- cannot find module for dummy 'dummy7'!-->
+		<!-- cannot find module for dummy 'dummy8'!-->
+		<!-- cannot find module for dummy 'dummy9'!-->
+		<!-- cannot find module for dummy 'dummy10'!-->
+		<!-- cannot find module for dummy 'dummy11'!-->
+        <!-- cannot find module for dummy 'dummy12'!-->
+        <!-- cannot find module for dummy 'dummy13'!-->
+		<!-- cannot find module for dummy 'dummy14'!-->
+        <!-- cannot find module for dummy 'dummy15'!-->
+        <!-- cannot find module for dummy 'dummy16'!-->
+		<!-- cannot find module for dummy 'dummy17'!-->
+        <!-- cannot find module for dummy 'dummy18'!-->
+        <!-- cannot find module for dummy 'dummy19'!-->
+		<!-- cannot find module for dummy 'dummy20'!-->
+        <!-- cannot find module for dummy 'dummy21'!-->
+        <!-- cannot find module for dummy 'dummy22'!-->
+		<!-- cannot find module for dummy 'dummy23'!-->
+        <!-- cannot find module for dummy 'dummy24'!-->
+        <!-- cannot find module for dummy 'dummy25'!-->
+	</div>
+	<div id="activityButtons">
+        <markAllButton id="markAnswers"/>
+        <showAnswersButton id="showAnswers"/>
+        <resetButton id="reset"/>
+    </div>
+</group>
+            <!-- cannot find module for dummy 'dummy2'!-->
+            <!-- cannot find module for dummy 'dummy3'!-->
+            <!-- cannot find module for dummy 'dummy4'!-->
+            <!-- cannot find module for dummy 'dummy5'!-->
+            <!-- cannot find module for dummy 'dummy6'!-->
+            <!-- cannot find module for dummy 'dummy7'!-->
+            <!-- cannot find module for dummy 'dummy8'!-->
+            <!-- cannot find module for dummy 'dummy9'!-->
+            <!-- cannot find module for dummy 'dummy10'!-->
+        </div>
+			</itemBody>
+</assessmentItem>

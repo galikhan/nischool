@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><assessmentItem adaptive="false" compilerVersion="3.3.2.78" identifier="ITEM_010" playerVersion="1.8.0" timeDependent="false" title="2-жаттығу">
+<styleDeclaration><link href="../common/mcc_lesson.css" userAgent=".*"/><link href="../common/mcc_activity_page.css" userAgent=".*"/><link href="../common/default.css" userAgent=".*"/><link href="../common/exer.css" userAgent=".*"/></styleDeclaration>
+	<variableProcessing template="default"/>
+		<outcomeDeclaration cardinality="single" identifier="DONE"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DONEHISTORY"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DONECHANGES"/>
+		<outcomeDeclaration cardinality="single" identifier="LASTMISTAKEN"/>
+		<outcomeDeclaration cardinality="single" identifier="CHECKS"/>
+		<outcomeDeclaration cardinality="single" identifier="SHOW_ANSWERS"/>
+		<outcomeDeclaration cardinality="single" identifier="RESET"/>
+		<outcomeDeclaration cardinality="single" identifier="MISTAKES"/>
+	<outcomeDeclaration cardinality="single" identifier="TODO">
+		<defaultValue>
+			<value>4</value>
+		</defaultValue>
+	</outcomeDeclaration>
+
+		<outcomeDeclaration cardinality="single" identifier="CONNECTION_RESPONSE_1-DONE"/>
+		<outcomeDeclaration cardinality="single" identifier="CONNECTION_RESPONSE_1-TODO"/>
+		<outcomeDeclaration cardinality="multiple" identifier="CONNECTION_RESPONSE_1-LASTCHANGE"/>
+		<outcomeDeclaration cardinality="multiple" identifier="CONNECTION_RESPONSE_1-PREVIOUS"/>
+		<outcomeDeclaration cardinality="single" identifier="CONNECTION_RESPONSE_1-LASTMISTAKEN"/>
+		<outcomeDeclaration cardinality="multiple" identifier="CONNECTION_RESPONSE_1-DONEHISTORY"/>
+		<outcomeDeclaration cardinality="multiple" identifier="CONNECTION_RESPONSE_1-DONECHANGES"/>
+		<outcomeDeclaration cardinality="single" identifier="CONNECTION_RESPONSE_1-MISTAKES"/>
+				<responseDeclaration cardinality="multiple" checkMode="default" countMode="single" evaluate="user" identifier="CONNECTION_RESPONSE_1">
+					<correctResponse>
+						<value>CONNECTION_RESPONSE_1_0 CONNECTION_RESPONSE_1_1</value>
+						<value>CONNECTION_RESPONSE_1_3 CONNECTION_RESPONSE_1_4</value>
+						<value>CONNECTION_RESPONSE_1_6 CONNECTION_RESPONSE_1_7</value>
+						<value>CONNECTION_RESPONSE_1_9 CONNECTION_RESPONSE_1_10</value>
+					</correctResponse>
+				</responseDeclaration>
+		<itemBody>
+
+		<div class="mcc_activity_page">
+				<div class="page_title">
+					<div class="pageicon"/>
+					<div class="pagetitle"><info class="report-custom1-content2"/></div>
+       			</div>			
+            <group class="exer" id="dummy1">
+	<div id="activities">
+		<simpleText class="title" id="dummy1_1">
+Сол жақтағы тамырдың бөліктерін оң жақтағы олардың атқаратын қызметтерімен байланыстырыңыз.</simpleText>
+		<matchInteraction class="roots" id="dummy1_2" responseIdentifier="CONNECTION_RESPONSE_1" shuffle="false">
+	<simpleMatchSet>
+	<simpleAssociableChoice fixed="false" identifier="CONNECTION_RESPONSE_1_0" matchMax="4">
+Тамыр оймақшасы	</simpleAssociableChoice>
+	<simpleAssociableChoice fixed="false" identifier="CONNECTION_RESPONSE_1_3" matchMax="4">
+Тамыр түктері	</simpleAssociableChoice>
+	<simpleAssociableChoice fixed="false" identifier="CONNECTION_RESPONSE_1_6" matchMax="4">
+Созылу аймағы	</simpleAssociableChoice>
+	<simpleAssociableChoice fixed="false" identifier="CONNECTION_RESPONSE_1_9" matchMax="4">
+Апикальді меристема	</simpleAssociableChoice>
+	</simpleMatchSet>
+	<simpleMatchSet>
+	<simpleAssociableChoice fixed="false" identifier="CONNECTION_RESPONSE_1_1" matchMax="4">
+тамырдың апикальді меристемасын қорғайды.	</simpleAssociableChoice>
+	<simpleAssociableChoice fixed="false" identifier="CONNECTION_RESPONSE_1_4" matchMax="4">
+тамырдың топырақтан су мен минералды тұздарды алу бөлігі.	</simpleAssociableChoice>
+	<simpleAssociableChoice fixed="false" identifier="CONNECTION_RESPONSE_1_10" matchMax="4">
+жасушалардың қарқынды  бөлінуі арқылы тамырдың ұзындық бойынша өсуіне мүмкіндік беретін тамыр бөлігі.	</simpleAssociableChoice>
+	<simpleAssociableChoice fixed="false" identifier="CONNECTION_RESPONSE_1_7" matchMax="4">
+жасушалардың бөлінетін және ұзара алатын бөлігі.	</simpleAssociableChoice>
+	</simpleMatchSet>
+	<feedbacks>
+		<feedback>
+			<condition>
+				<and>
+		<propertyCondition property="ok"/>
+				</and>
+			</condition>
+		<action>
+			<showText/>
+				<showUrl href="media/ok.mp3" type="narration">
+								<source src="media/ok.mp3" type="audio/mp4"/>
+				</showUrl>
+		</action>
+		</feedback>
+		<feedback>
+			<condition>
+				<and>
+		<propertyCondition property="wrong"/>
+				</and>
+			</condition>
+		<action>
+			<showText/>
+				<showUrl href="media/wrong.mp3" type="narration">
+								<source src="media/wrong.mp3" type="audio/mp4"/>
+				</showUrl>
+		</action>
+		</feedback>
+	</feedbacks>
+</matchInteraction>
+
+
+		<!-- cannot find module for dummy 'dummy3'!-->
+		<!-- cannot find module for dummy 'dummy4'!-->
+		<!-- cannot find module for dummy 'dummy5'!-->
+		<!-- cannot find module for dummy 'dummy6'!-->
+		<!-- cannot find module for dummy 'dummy7'!-->
+		<!-- cannot find module for dummy 'dummy8'!-->
+		<!-- cannot find module for dummy 'dummy9'!-->
+		<!-- cannot find module for dummy 'dummy10'!-->
+		<!-- cannot find module for dummy 'dummy11'!-->
+        <!-- cannot find module for dummy 'dummy12'!-->
+        <!-- cannot find module for dummy 'dummy13'!-->
+		<!-- cannot find module for dummy 'dummy14'!-->
+        <!-- cannot find module for dummy 'dummy15'!-->
+        <!-- cannot find module for dummy 'dummy16'!-->
+		<!-- cannot find module for dummy 'dummy17'!-->
+        <!-- cannot find module for dummy 'dummy18'!-->
+        <!-- cannot find module for dummy 'dummy19'!-->
+		<!-- cannot find module for dummy 'dummy20'!-->
+        <!-- cannot find module for dummy 'dummy21'!-->
+        <!-- cannot find module for dummy 'dummy22'!-->
+		<!-- cannot find module for dummy 'dummy23'!-->
+        <!-- cannot find module for dummy 'dummy24'!-->
+        <!-- cannot find module for dummy 'dummy25'!-->
+	</div>
+	<div id="activityButtons">
+        <markAllButton id="markAnswers"/>
+        <showAnswersButton id="showAnswers"/>
+        <resetButton id="reset"/>
+    </div>
+</group>
+            <!-- cannot find module for dummy 'dummy2'!-->
+            <!-- cannot find module for dummy 'dummy3'!-->
+            <!-- cannot find module for dummy 'dummy4'!-->
+            <!-- cannot find module for dummy 'dummy5'!-->
+            <!-- cannot find module for dummy 'dummy6'!-->
+            <!-- cannot find module for dummy 'dummy7'!-->
+            <!-- cannot find module for dummy 'dummy8'!-->
+            <!-- cannot find module for dummy 'dummy9'!-->
+            <!-- cannot find module for dummy 'dummy10'!-->
+        </div>
+			</itemBody>
+</assessmentItem>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+	<title>Player</title>
+
+	<script type="text/javascript" src="Lib/sscompat.js"></script> 
+	<script type="text/javascript" src="Lib/sscorlib.js"></script>  
+	<script type="text/javascript" src="Lib/ssfx.Core.js"></script> 
+	<script type="text/javascript" src="Lib/API_BASE.js"></script>    
+	<script type="text/javascript" src="Lib/API.js"></script>  
+	<script type="text/javascript" src="Lib/API_1484_11.js"></script>
+	<script type="text/javascript" src="Lib/Controls.js"></script>        
+	<script type="text/javascript" src="Lib/LocalStorage.js"></script>
+	<script type="text/javascript" src="Lib/Player.js"></script>
+
+	<style type="text/css">
+		* { margin: 0px; }
+    html, body, iframe {
+      height:100%;
+    }
+		html, body {
+        overflow-y:hidden;
+        font-family:Helvetica, "Helvetica Neue", Arial;
+        font-size:12px;
+    }
+		iframe {
+      display:block; width:100%;
+    }
+
+		html, body, iframe {
+		  border : 0px none;
+      padding: 0px; 
+		}
+	</style>
+</head>
+<body onload="InitPlayer()">
+
+  <script type="text/javascript">
+    function InitPlayer() {
+      PlayerConfiguration.StorageSupport = true;
+      Run.ManifestByURL("scorm/1378233081/imsmanifest.xml", true);
+    }
+  </script>
+
+  <div id="placeholder_contentIFrame" style="width:100%;height:100%;-webkit-overflow-scrolling:touch;"></div>
+
+</body>
+</html>

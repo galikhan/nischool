@@ -1,0 +1,91 @@
+#{extends 'Admin/admin.html' /}
+
+<!-- BEGIN FORM-->
+#{form @Admin.addResource(), enctype:'multipart/form-data'}
+	<fieldset>
+		#{ifErrors}
+		<div class="alert alert-error hide">
+			<button class="close" data-dismiss="alert"></button>
+			Неправильно заполнена форма, перепроверьте, пожалуйста.
+		</div>
+		#{/ifErrors} 
+		<div class="alert alert-success hide">
+			<button class="close" data-dismiss="alert"></button>
+			Your form validation is successful!
+		</div>
+
+			<div class="control-group">
+				<label class="control-label">Наименование <span class="required">*</span></label>
+			    <div class="controls">
+			      <input type="text" name="title" placeholder="Наименование ЦОРа" value="${params.title}"  class="span6 m-wrap">
+			    </div>
+			</div>
+			
+			<div class="control-group">
+				<label class="control-label">Хэштеги <span class="required">*</span></label>
+			    <div class="controls">
+			      <input type="text" name="keywords" placeholder="Ключевые слова" value="${params.keywords}" class="span6 m-wrap">
+			    </div>
+			</div>
+			
+			<div class="control-group">
+				<label class="control-label">Автор <span class="required">*</span></label>
+			    <div class="controls">
+			      <input type="text" name="author" placeholder="Имя Фамилия" value="${params.author}" class="span6 m-wrap">
+			    </div>
+			</div>
+			
+			<div class="control-group">
+				<label class="control-label">Описание <span class="required">*</span></label>
+			    <div class="controls">
+			      <textarea name="description" placeholder="Текст..." value="${params.description}" class="span6 m-wrap"></textarea>
+			    </div>
+			</div>
+			
+			<div class="control-group">
+				<label class="control-label">Тип <span class="text-error">*</span></label>
+			    <div class="controls">
+			      <select class="span6 m-wrap" name="contentType" value="${params.contentType}">
+						<option value="SCORM"> SCORM </option>
+						<option value="Видео"> Видео </option>
+						<option value="Аудио"> Аудио </option>
+			      </select>
+			    </div>
+			</div>
+			
+			<div class="control-group">
+				<label class="control-label">Категория <span class="required">*</span></label>
+			    <div class="controls">
+			      <select class="span6 m-wrap" name="categoryId" value="${params.categoryId}">
+					#{list items:categories, as:'category'}
+						<option value="${category.id}">
+							${category.id} - ${category.name}
+						</option>
+					#{/list}
+			      </select>
+			    </div>
+			</div>
+			
+			<div class="control-group">
+				<label class="control-label">Язык <span class="required">*</span></label>
+			    <div class="controls">
+			      <select class="span6 m-wrap" name="languageId" value="${params.languageId}">
+					#{list items:languages, as:'language'}
+						<option value="${language.id}">
+							${language.id} - ${language.languageName}
+						</option>
+					#{/list}
+			      </select>
+			    </div>
+			</div>
+			<div>
+			   Загрузить обложку <input type="file" name="poster"><br />
+			   Загрузить ЦОР <input type="file" name="cor">
+			</div>
+
+			<div class="form-actions">
+				<button type="submit" class="btn btn-primary">Добавить ЦОР</button>
+			</div>
+	</fieldset>
+#{/form}
+<!-- END FORM-->

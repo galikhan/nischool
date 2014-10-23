@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><assessmentItem adaptive="false" compilerVersion="3.3.2.78" identifier="ITEM_013" playerVersion="1.8.0" timeDependent="false" title="Қорытынды">
+<styleDeclaration><link href="../common/mcc_lesson.css" userAgent=".*"/><link href="../common/mcc_toc_page.css" userAgent=".*"/><link href="../common/default.css" userAgent=".*"/></styleDeclaration>
+	<variableProcessing template="default"/>
+		<outcomeDeclaration cardinality="single" identifier="DONE"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DONEHISTORY"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DONECHANGES"/>
+		<outcomeDeclaration cardinality="single" identifier="LASTMISTAKEN"/>
+		<outcomeDeclaration cardinality="single" identifier="CHECKS"/>
+		<outcomeDeclaration cardinality="single" identifier="SHOW_ANSWERS"/>
+		<outcomeDeclaration cardinality="single" identifier="RESET"/>
+		<outcomeDeclaration cardinality="single" identifier="MISTAKES"/>
+	<outcomeDeclaration cardinality="single" identifier="TODO">
+		<defaultValue>
+			<value>0</value>
+		</defaultValue>
+	</outcomeDeclaration>
+		<itemBody>
+
+		<report class="report-page">
+		<rr>
+			<rd><simpleText class="report-icon"/></rd>
+			<rd><simpleText>ТАҚЫРЫБЫ</simpleText></rd>
+			<rd><simpleText>CҰРАҚТАР САНЫ</simpleText></rd>
+			<rd><simpleText>ДҰРЫС ЖАУАПТАР</simpleText></rd>
+			<rd><simpleText>ҚАТЕЛЕР</simpleText></rd>
+		</rr>
+		<prr>			
+			<rd><simpleText class="content-icon"/></rd>
+			<rd><link><info class="report-custom1-content2"/></link></rd>
+			<rd><info class="report-custom1-content11"/></rd>
+			<rd><info class="report-custom1-content12"/></rd>
+			<rd><info class="report-custom1-content4"/></rd>
+		</prr>
+
+		</report>
+	
+		
+			</itemBody>
+</assessmentItem>

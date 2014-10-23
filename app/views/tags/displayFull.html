@@ -1,0 +1,99 @@
+        <div class="row">
+            <br>
+            <div class="col-md-4 col-md-offset-1">
+                <div class="product-img">
+
+                    #{if _resource.contentType == "Аудио"}
+                    <a class="fancybox" href="img/650x700.jpg"><img style="width:300px" src="@{'/public/media-content'}/${_resource.id}/${_resource.posterName}" /></a>
+                    <audio src="@{'public/media-content'}/${_resource.id}/${_resource.corName}" controls>
+                        <source src="sound.ogg">
+                        <source src="sound.mp3">
+                        Browser not support
+                    </audio>
+                    #{/if}
+
+                    #{if _resource.contentType == "Видео"}
+                    <video id="example_video_1" class="video-js vjs-default-skin" controls preload="none" width="370" height="250"
+                           poster="@{'/public/media-content'}/${_resource.id}/${_resource.posterName}"
+                           data-setup="{}">
+                        <source src="@{'/public/media-content'}/${_resource.id}/${_resource.corName}" type='video/mp4' />
+                        <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
+                    </video>
+                    #{/if}
+
+                    #{if _resource.contentType == "SCORM"}
+                    <img style='width: 301px;' src="@{'/public/media-content'}/${_resource.id}/${_resource.posterName}" /> <br />
+                    <a href="@{Application.playScorm(_resource.id)}" target="_blank">воспроизвести</a>
+                    #{/if}
+
+
+                </div><!--end product-img-->
+            </div>
+
+                <div class="col-md-6">
+                    <div class="product-set">
+                        <div class="product-price">
+                            <!--<span> ${_resource.contentType}</span>-->
+                        </div><!--end product-price-->
+                        <!--end product-inputs-->
+                        <div class="product-info">
+                            <dl class="dl-horizontal">
+                                <dt></dt>
+                                <dd>${_resource.title}</dd>
+
+                                <dt></dt>
+                                <dd><hr></dd>
+
+                                <dt></dt>
+                                <dd><span id="stars"></span>&nbsp;<span id="rate">${_resource.rating}</span></dd>
+
+                                <dt></dt>
+                                <dd><hr></dd>
+
+                              <dt>Автор:</dt>
+                              <dd>${_resource.author}</dd>
+
+                              <!--<dt>Upload Date:</dt>-->
+                              <!--<dd>${_resource.uploadDate.format('dd MMM yy')}</dd>-->
+
+                              <!--<dt>Viewed:</dt>-->
+                              <!--<dd>${_resource.viewed}</dd>-->
+
+                              <dt>Описание:</dt>
+                              <dd>${_resource.description}</dd>
+
+                              <dt></dt>
+                              <dd>
+                                  <!--<span id="rate">${_resource.rating}</span>-->
+                                  <!--<span>${_resource.rateCount}</span>-->
+                              </dd>
+
+                            </dl>
+                        </div><!--end product-info-->
+                    </div><!--end product-set-->
+                </div>
+             </div>
+
+
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    #{list items:_resource.comments, as:'comment'}
+                        <hr>
+                        <div class="single-review clearfix">
+                            <div class="review-header">
+                                <h4>${comment.author}</h4>
+                                <small>${comment.postedAt.format('dd MMM yy')}</small>
+                            </div><!--end review-header-->
+                            <div class="review-body">
+                                <p>${comment.content.escape().nl2br()}</p>
+                            </div><!--end review-body-->
+                            <a href="@{Application.removeResComment(_resource.id, comment.id)}">delete</a>
+                        </div>
+                    #{/list}
+                </div>
+			</div><!--end row-->
+
+<script type="text/javascript" charset="utf-8">
+	generate_stars(${_resource.id}, ${_resource.rating}, 5, "stars");
+</script>
+

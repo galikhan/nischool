@@ -1,0 +1,315 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+
+    <title>Empiria Player</title>
+
+	<!-- styles needed by jScrollPane -->
+	<link type="text/css" href="scroll/jquery.jscrollpane.css" rel="stylesheet" media="all" />
+
+	
+    <!-- include Scorm API Wrapper !-->
+	<script src="runtime/common/util/util.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		var windowLocation = window.location.toString();
+		var useScormYdp = toBool(getParam(windowLocation,"scormydp",true));
+		var useJsInject = toBool(getParam(windowLocation,"jsinjectrequests",false));
+		var apiWrapperPath = "runtime/common/scorm/APIWrapper";
+		if (getParam(windowLocation,"api")=="13")
+			apiWrapperPath += "13";
+		apiWrapperPath += ".js";
+		document.write("<script src=\""+apiWrapperPath+"\" type=\"text/javascript\"\><\/script>");
+
+		if (useJsInject){
+			var jsFileRequestSuffix = ".js";
+			var jsFileRequestPerformer = "jsinject";
+			var jsFileRequestEnableLogging = false;
+		}
+
+		var lessonTitle = getParam(windowLocation,"title","");
+		if (lessonTitle.length > 0)
+			document.title = lessonTitle;
+	</script>
+
+	<!-- empiria player !-->
+	<script type="text/javascript" language="javascript" src="runtime/rtempiria/player/empiria.player.nocache.js"></script>
+	<script language="javascript">
+		window.scoStartDate = null;
+		window.player = null;
+
+		function empiriaPlayerAppLoaded(){
+			// start Scorm API
+			doLMSInitialize();
+
+			// Initialize player
+			window.player = empiriaCreatePlayer('player');
+
+			// Player flow options
+			window.player.importFlowOptions = function() {
+								return {showToC: false, showSummary: false, itemsDisplayMode: "ONE" }
+							};
+
+			// state
+			window.player.importStateString = function() {
+								var state = doLMSGetValue("cmi.suspend_data");
+								if (state == null || state == false)
+									state = "";
+								return state;
+							}
+
+			// mastery score
+			var mastery = doLMSGetMasteryScore();
+			if (mastery != "")
+				window.player.setMasteryScore(mastery);
+
+			// load assessment
+			var sco = getAbsolutePageXmlUrl(true);
+			window.player.load(sco);
+
+			window.scoStartDate = new Date();
+		}
+
+
+		function saveState(finish) {
+			// state
+			var state = window.player.exportStateString();
+			doLMSSetValue("cmi.suspend_data",state);
+			// time
+			var sessionTime = window.player.getAssessmentTime();
+			sessionTime = formatScormTime( Math.round(sessionTime) );
+			doLMSSetTime( sessionTime );
+			// score
+			doLMSSetScore(window.player.getScore(), window.player.getScoreMax());
+			// lesson status
+			var lessonStatus = window.player.getLessonStatus().toLowerCase();
+			doLMSSetStatus( lessonStatus );
+
+			// YDP extension: hints and mistakes
+			if (useScormYdp) {
+				try {
+					var hints = window.player.getChecks() + window.player.getShowAnswers();
+					var mistakes = window.player.getMistakes();
+					doLMSSetValue("ydp.hints",hints);
+					doLMSSetValue("ydp.mistakes",mistakes);
+				} catch(e) {
+				}
+			}
+
+			// ask LMS to suspend the user learning attempt, and retrieve the state (cmi.suspend_data) at the next session
+			doLMSSetExit();
+			// save
+			if (finish)
+				doLMSFinish();
+			else
+				doLMSCommit();
+		}
+		
+			
+	</script>
+
+	<script type="text/javascript" src="scroll/jquery.mousewheel.js"></script>
+	<script type="text/javascript" src="scroll/jquery.jscrollpane.js"></script>
+	
+	<style type="text/css">
+		#mainPreloader {
+			position: absolute;
+			width: 96px;
+			height: 96px;
+			top: 50%;
+			left: 50%;
+			margin-left: -48px;
+			margin-top: -48px;
+		}
+	</style>
+
+</head>
+<body onunload="saveState(1);">
+
+	<div id="player"></div>
+	<img id="mainPreloader" src="runtime/rtempiria/player/preloader/preloader.gif">
+	
+	<script language="javascript">	
+	
+		function empiriaUnlockScroll(){	
+			window.scrollBlock = false;	
+		};
+			
+		function empiriaLockScroll(){	
+			window.scrollBlock = true;				
+		};			
+			
+		$(document).ready(function() {
+		
+			$("#player").wrap('<div id="scroll_pane_wrapper" class="scroll-pane" />');
+		
+			$('.scroll-pane').jScrollPane(
+				{
+					showArrows:false, 
+					verticalArrowPositions: 'before', 
+					horizontalArrowPositions: 'before',
+					autoReinitialise: true
+				}
+			);
+		});
+			
+		document.write('<style type="text/css" id="page-css"> html, body {height: 100%;}	#container{height: 100%;} pre{width: 100%;} .scroll-pane{width: 100%;height: 100%;overflow: auto;}<\/style>');
+		
+		var object = this.parent.document.getElementById("scorm_object");
+		var scorm_object = object;
+		if(object != null) {
+			if(object.tagName == "OBJECT") {
+				var newIframe = document.createElement('iframe');
+				newIframe.setAttribute('id', 'scorm_object');
+				newIframe.setAttribute('width', object.style.width);
+				newIframe.setAttribute('height', object.style.height);
+				newIframe.setAttribute('src', object.getAttribute('data'));
+			
+				parent = object.parentNode;
+				parent.removeChild(object);
+				parent.appendChild(newIframe);
+				
+				scorm_object = newIframe;
+			}
+			
+			scorm_object.setAttribute('mozallowfullscreen', 'true');
+			scorm_object.setAttribute('webkitallowfullscreen', 'true');
+			scorm_object.setAttribute('allowfullscreen', 'true');
+		}
+		
+	</script>
+	<!--            Cut Here-->
+            
+            <p id="hint-box" style="display: none; color: black; border: solid 1px #000000; background: white; text-align: center; padding: 10px">Ойнату/кідіру</p>
+            <p id="instruction-box" style="display: none; color: black; border: solid 1px #000000; background: white; text-align: center; padding: 10px">Тапсырманы орында.</p>
+                        
+            <script>
+                (function(b){b.fn.bPopup=function(u,C){function v(){a.modal&&b('<div class="b-modal '+e+'"></div>').css({backgroundColor:a.modalColor,position:"fixed",top:0,right:0,bottom:0,left:0,opacity:0,zIndex:a.zIndex+l}).appendTo(a.appendTo).fadeTo(a.speed,a.opacity);z();c.data("bPopup",a).data("id",e).css({left:"slideIn"===a.transition?-1*(m+h):n(!(!a.follow[0]&&p||g)),position:a.positionStyle||"absolute",top:"slideDown"===a.transition?-1*(q+h):r(!(!a.follow[1]&&s||g)),"z-index":a.zIndex+l+1}).each(function(){a.appending&&b(this).appendTo(a.appendTo)});D(!0)}function t(){a.modal&&b(".b-modal."+c.data("id")).fadeTo(a.speed,0,function(){b(this).remove()});a.scrollBar||b("html").css("overflow","auto");b(".b-modal."+e).unbind("click");j.unbind("keydown."+e);d.unbind("."+e).data("bPopup",0<d.data("bPopup")-1?d.data("bPopup")-1:null);c.undelegate(".bClose, ."+a.closeClass,"click."+e,t).data("bPopup",null);D();return!1}function E(f){var b=f.width(),e=f.height(),d={};a.contentContainer.css({height:e,width:b});e>=c.height()&&(d.height=c.height());b>=c.width()&&(d.width=c.width());w=c.outerHeight(!0);h=c.outerWidth(!0);z();a.contentContainer.css({height:"auto",width:"auto"});d.left=n(!(!a.follow[0]&&p||g));d.top=r(!(!a.follow[1]&&s||g));c.animate(d,250,function(){f.show();x=A()})}function D(f){switch(a.transition){case "slideIn":c.css({display:"block",opacity:1}).animate({left:f?n(!(!a.follow[0]&&p||g)):j.scrollLeft()-(h||c.outerWidth(!0))-200},a.speed,a.easing,function(){B(f)});break;case "slideDown":c.css({display:"block",opacity:1}).animate({top:f?r(!(!a.follow[1]&&s||g)):j.scrollTop()-(w||c.outerHeight(!0))-200},a.speed,a.easing,function(){B(f)});break;default:c.stop().fadeTo(a.speed,f?1:0,function(){B(f)})}}function B(f){f?(d.data("bPopup",l),c.delegate(".bClose, ."+a.closeClass,"click."+e,t),a.modalClose&&b(".b-modal."+e).css("cursor","pointer").bind("click",t),!G&&(a.follow[0]||a.follow[1])&&d.bind("scroll."+e,function(){x&&c.dequeue().animate({left:a.follow[0]?n(!g):"auto",top:a.follow[1]?r(!g):"auto"},a.followSpeed,a.followEasing)}).bind("resize."+e,function(){if(x=A())clearTimeout(F),F=setTimeout(function(){z();c.dequeue().each(function(){g?b(this).css({left:m,top:q}):b(this).animate({left:a.follow[0]?n(!0):"auto",top:a.follow[1]?r(!0):"auto"},a.followSpeed,a.followEasing)})},50)}),a.escClose&&j.bind("keydown."+e,function(a){27==a.which&&t()}),k(C)):(c.hide(),k(a.onClose),a.loadUrl&&(a.contentContainer.empty(),c.css({height:"auto",width:"auto"})))}function n(a){return a?m+j.scrollLeft():m}function r(a){return a?q+j.scrollTop():q}function k(a){b.isFunction(a)&&a.call(c)}function z(){var b;s?b=a.position[1]:(b=((window.innerHeight||d.height())-c.outerHeight(!0))/2-a.amsl,b=b<y?y:b);q=b;m=p?a.position[0]:((window.innerWidth||d.width())-c.outerWidth(!0))/2;x=A()}function A(){return(window.innerHeight||d.height())>c.outerHeight(!0)+y&&(window.innerWidth||d.width())>c.outerWidth(!0)+y}b.isFunction(u)&&(C=u,u=null);var a=b.extend({},b.fn.bPopup.defaults,u);a.scrollBar||b("html").css("overflow","hidden");var c=this,j=b(document),d=b(window),G=/OS 6(_\d)+/i.test(navigator.userAgent),y=20,l=0,e,x,s,p,g,q,m,w,h,F;c.close=function(){a=this.data("bPopup");e="__b-popup"+d.data("bPopup")+"__";t()};return c.each(function(){if(!b(this).data("bPopup"))if(k(a.onOpen),l=(d.data("bPopup")||0)+1,e="__b-popup"+l+"__",s="auto"!==a.position[1],p="auto"!==a.position[0],g="fixed"===a.positionStyle,w=c.outerHeight(!0),h=c.outerWidth(!0),a.loadUrl)switch(a.contentContainer=b(a.contentContainer||c),a.content){case "iframe":var f=b('<iframe class="b-iframe" scrolling="no" frameborder="0"></iframe>');f.appendTo(a.contentContainer);w=c.outerHeight(!0);h=c.outerWidth(!0);v();f.attr("src",a.loadUrl);k(a.loadCallback);break;case "image":v();b("<img />").load(function(){k(a.loadCallback);E(b(this))}).attr("src",a.loadUrl).hide().appendTo(a.contentContainer);break;default:v(),b('<div class="b-ajax-wrapper"></div>').load(a.loadUrl,a.loadData,function(){k(a.loadCallback);E(b(this))}).hide().appendTo(a.contentContainer)}else v()})};b.fn.bPopup.defaults={amsl:50,appending:!0,appendTo:"body",closeClass:"b-close",content:"ajax",contentContainer:!1,easing:"swing",escClose:!0,follow:[!0,!0],followEasing:"swing",followSpeed:500,loadCallback:!1,loadData:!1,loadUrl:!1,modal:!0,modalClose:!0,modalColor:"#000",onClose:!1,onOpen:!1,opacity:0.7,position:["auto","auto"],positionStyle:"absolute",scrollBar:!0,speed:250,transition:"fadeIn",zIndex:9997}})(jQuery);
+            </script>
+            <script>                
+               $(document).ready(function (){
+                   //Common vars 
+                   var i_pos = {};
+                   var hint_box = $("#hint-box");
+                   var instr_box = $("#instruction-box");           
+                    
+                    $(document).on("mouseenter mouseleave", "#mediaPlayPauseButton", function(event) {                                               
+                        i_pos = $(this).offset();                        
+                        var left = (i_pos.left) + "px";
+                        var top = (i_pos.top - 50) + "px";
+                        $(hint_box).css({position: "absolute", left : left, top : top});
+                        
+                        if(event.type === "mouseenter") {                            
+                            $(hint_box).text("ойнату/кідіру").show();
+                        } else {
+                            $(hint_box).hide();
+                        }                        
+                    });
+                    
+                    $(document).on("mouseenter mouseleave", "#mediaStopButton", function(event) {                                               
+                        i_pos = $(this).offset();                        
+                        var left = (i_pos.left) + "px";
+                        var top = (i_pos.top - 50) + "px";
+                        $(hint_box).css({position: "absolute", left : left, top : top});
+                        
+                        if(event.type === "mouseenter") {                            
+                            $(hint_box).text("тоқтату").show();
+                        } else {
+                            $(hint_box).hide();
+                        }                        
+                    });
+                    
+                    $(document).on("mouseenter mouseleave", "#markAnswers", function(event) {                                               
+                        i_pos = $(this).offset();                        
+                        var left = (i_pos.left) + "px";
+                        var top = (i_pos.top - 50) + "px";
+                        $(hint_box).css({position: "absolute", left : left, top : top});
+                        
+                        if(event.type === "mouseenter") {                            
+                            $(hint_box).text("тексеру").show();
+                        } else {
+                            $(hint_box).hide();
+                        }                        
+                    });
+                    
+                    $(document).on("mouseenter mouseleave", "#showAnswers", function(event) {                                               
+                        i_pos = $(this).offset();                        
+                        var left = (i_pos.left) + "px";
+                        var top = (i_pos.top - 50) + "px";
+                        $(hint_box).css({position: "absolute", left : left, top : top});
+                        
+                        if(event.type === "mouseenter") {                            
+                            $(hint_box).text("жауабын көру").show();
+                        } else {
+                            $(hint_box).hide();
+                        }                        
+                    });
+                    
+                    $(document).on("mouseenter mouseleave", "#reset", function(event) {                                               
+                        i_pos = $(this).offset();                        
+                        var left = (i_pos.left) + "px";
+                        var top = (i_pos.top - 50) + "px";
+                        $(hint_box).css({position: "absolute", left : left, top : top});
+                        
+                        if(event.type === "mouseenter") {                            
+                            $(hint_box).text("қайталау").show();
+                        } else {
+                            $(hint_box).hide();
+                        }                        
+                    });
+                    
+                    $(document).on("mouseenter mouseleave", "#home_button", function(event) {                                               
+                        i_pos = $(this).offset();                        
+                        var left = (i_pos.left) + "px";
+                        var top = (i_pos.top - 50) + "px";
+                        $(hint_box).css({position: "absolute", left : left, top : top});
+                        
+                        if(event.type === "mouseenter") {                            
+                            $(hint_box).text("Бастапқы бет").show();
+                        } else {
+                            $(hint_box).hide();
+                        }                        
+                    });
+                    
+                    $(document).on("mouseenter mouseleave", "#prevPage", function(event) {                                               
+                        i_pos = $(this).offset();                        
+                        var left = (i_pos.left) + "px";
+                        var top = (i_pos.top - 50) + "px";
+                        $(hint_box).css({position: "absolute", left : left, top : top});
+                        
+                        if(event.type === "mouseenter") {                            
+                            $(hint_box).text("алдыңғы бет").show();
+                        } else {
+                            $(hint_box).hide();
+                        }                        
+                    });
+                    
+                    $(document).on("mouseenter mouseleave", "#nextPage", function(event) {                                               
+                        i_pos = $(this).offset();                        
+                        var left = (i_pos.left) + "px";
+                        var top = (i_pos.top - 50) + "px";
+                        $(hint_box).css({position: "absolute", left : left, top : top});
+                        
+                        if(event.type === "mouseenter") {                            
+                            $(hint_box).text("келесі бет").show();
+                        } else {
+                            $(hint_box).hide();
+                        }                        
+                    });
+                    
+                    //feedBackBtn                     
+                    $(document).on("click","#feedbackBtn",function(e) {                        
+                        e.preventDefault();
+                        $(instr_box).bPopup();
+                        
+                    });
+                   
+               }); 
+    
+    </script>
+	  
+    <!--            Cut Here-->
+	
+</body>
+</html>

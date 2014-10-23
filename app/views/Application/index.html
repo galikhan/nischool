@@ -1,0 +1,12 @@
+#{extends 'main.html' /}
+#{set title:'Home' /}
+
+<div class="row">
+    <ul class="hProductItems clearfix">
+        #{list items:resources, as:'res'}
+        <li class="span3 clearfix">
+            #{display resource:res /}
+        </li>
+        #{/list}
+    </ul>
+</div>

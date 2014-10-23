@@ -1,0 +1,64 @@
+.pict{
+	background: #79c9ff;
+	padding: 10px 10px 0px 10px;
+	color: black;
+	margin:20px 0px;
+}
+.pict_labels{
+	background: #79c9ff;
+	padding: 20px 20px 30px 20px;
+	color: black;
+}
+.pict_labels .qp-img-title{
+	left: 20px;
+	top: -3px;
+}
+.pict .title{
+	/*position:absolute;
+	color: white;
+	font-weight: bold;
+	text-shadow: 1px 1px #999;
+	padding: 0px 15px 10px 0px;
+	background-color: #95c11f;
+	min-width: 10px;
+	max-width: 240px;*/
+}
+
+.pict .qp-img {
+    margin: 17px 60px 27px 17px;
+}
+
+/*************** note ********************/
+.pict .note .qp-text{
+	text-align:left;
+	font-size:1em;
+}
+
+.pict .note{
+    padding: 0 0 30px 25px;
+    margin-top: -20px;
+}
+
+.pict .qp-img-description {
+    padding: 0 0 0 25px;
+}
+
+.pict .qp-img, .qp-table{
+    margin-right: 10px;
+}
+
+/*************** audio_btn ********************/
+
+.pict .qp-audioplayer-button-playing{
+	background: url(audio_stop_2.png) no-repeat scroll 0 0 transparent;
+}
+
+.pict .qp-text-module, .qp-audioplayer-button,
+.pict .qp-text-module, .qp-audioplayer-button-playing{
+	margin-bottom:2px;
+}
+
+.qp-text-module .qp-audioplayer-button,
+.qp-text-module .qp-audioplayer-button-playing{
+    margin-right:5px;
+}

@@ -1,0 +1,33 @@
+#{extends 'Admin/admin.html' /}
+
+<div class="table-toolbar">
+   <div class="btn-group">
+      <a href="@{Admin.addResource()}"><button class="btn btn-success">Добавить <i class="icon-plus icon-white"></i></button></a>
+   </div>
+</div>
+
+<table cellpadding="0" cellspacing="0" border="0" class="table table-striped table-bordered" id="example2">
+    <thead>
+        <tr>
+            <th>Ид</th>
+            <th>Наименование</th>
+            <th>Автор</th>
+            <th>Тип</th>
+            <th>Изменить</th>
+            <th>Удалить</th>
+        </tr>
+    </thead>
+    <tbody>
+	#{list items:resources, as:'resource'}
+	    <tr class="odd gradeA">
+	        <td>${resource.id}</td>
+	        <td>${resource.title}</td>
+	        <td>${resource.author}</td>
+	        <td>${resource.contentType}</td>
+	        <td><a href="@{Admin.editResource(resource.id)}">Изменить</a></td>
+	        <td><a href="@{Admin.deleteResource(resource.id)}">Удалить</a></td>
+	    </tr>
+	#{/list}
+    </tbody>
+</table>
+

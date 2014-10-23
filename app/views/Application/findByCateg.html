@@ -1,0 +1,23 @@
+#{extends 'main.html' /}
+#{set title:'Resources' /}
+
+#{if myResources.size()}
+    <div class="row">
+        <ul class="hProductItems clearfix">
+            #{list items:myResources, as:'res'}
+                <li class="span3 clearfix">
+                    #{display resource:res /}
+                </li>
+            #{/list}
+        </ul>
+    </div>
+#{/if}
+    
+#{else}
+    <div class="empty">
+        Не найдено
+    </div>
+#{/else}
+
+	
+

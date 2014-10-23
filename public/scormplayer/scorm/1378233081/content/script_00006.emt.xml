@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><assessmentTest compilerVersion="3.3.2.78" identifer="№3931. Тамырлардың құрылымы мен қызметі" playerVersion="1.8.0" title="№3931. Тамырлардың құрылымы мен қызметі">
+		<testView href="common/mcc_lesson.emp.xml"/>
+<lom xmlns="http://ltsc.ieee.org/xsd/LOM">
+	<general>
+		<keyword><string>Тамыр</string></keyword>
+		<keyword><string>тамыр жүйесі</string></keyword>
+		<keyword><string>негізгі тамыр</string></keyword>
+		<keyword><string>флоэма</string></keyword>
+		<keyword><string>ксилема</string></keyword>
+		<title><string>№3931. Тамырлардың құрылымы мен қызметі</string></title>
+	</general>
+	<educational>
+		<description><string>Бұл сабақта сіздер тамырдың құрылысымен танысасыздар. Тамыр жүйелерінің типтері және тамыр қандай қызмет атқаратыны туралы білетін боласыздар.</string></description>
+	</educational>
+</lom>
+	<styleDeclaration>
+		<link href="common/mcc_lesson.css" userAgent=".*"/>
+	<link href="common/default.css" userAgent=".*"/></styleDeclaration>
+	<variableProcessing template="default"/>
+
+	<outcomeDeclaration cardinality="single" identifier="DONE"/>
+	<outcomeDeclaration cardinality="single" identifier="TODO"/>
+	<outcomeDeclaration cardinality="single" identifier="CHECKS"/>
+	<outcomeDeclaration cardinality="single" identifier="SHOW_ANSWERS"/>
+	<outcomeDeclaration cardinality="single" identifier="RESET"/>
+	<outcomeDeclaration cardinality="single" identifier="MISTAKES"/>
+
+	<testPart>
+		<assessmentSection>
+			<assessmentItemRef class="mcc_toc_page" href="script_00006/script_00006_000.emp.xml" identifier="ITEM_000"/>
+			<assessmentItemRef class="mcc_media_page" href="script_00006/script_00006_001.emp.xml" identifier="ITEM_001"/>
+			<assessmentItemRef class="mcc_media_page" href="script_00006/script_00006_002.emp.xml" identifier="ITEM_002"/>
+			<assessmentItemRef class="mcc_media_page" href="script_00006/script_00006_003.emp.xml" identifier="ITEM_003"/>
+			<assessmentItemRef class="mcc_media_page" href="script_00006/script_00006_004.emp.xml" identifier="ITEM_004"/>
+			<assessmentItemRef class="mcc_media_page" href="script_00006/script_00006_005.emp.xml" identifier="ITEM_005"/>
+			<assessmentItemRef class="mcc_media_page" href="script_00006/script_00006_006.emp.xml" identifier="ITEM_006"/>
+			<assessmentItemRef class="mcc_media_page" href="script_00006/script_00006_007.emp.xml" identifier="ITEM_007"/>
+			<assessmentItemRef class="mcc_media_page" href="script_00006/script_00006_008.emp.xml" identifier="ITEM_008"/>
+			<assessmentItemRef class="mcc_activity_page" href="script_00006/script_00006_009.emp.xml" identifier="ITEM_009"/>
+			<assessmentItemRef class="mcc_activity_page" href="script_00006/script_00006_010.emp.xml" identifier="ITEM_010"/>
+			<assessmentItemRef class="mcc_activity_page" href="script_00006/script_00006_011.emp.xml" identifier="ITEM_011"/>
+			<assessmentItemRef class="mcc_activity_page" href="script_00006/script_00006_012.emp.xml" identifier="ITEM_012"/>
+			<assessmentItemRef class="mcc_report_page" href="script_00006/script_00006_013.emp.xml" identifier="ITEM_013"/>
+		</assessmentSection>
+	</testPart>
+</assessmentTest>

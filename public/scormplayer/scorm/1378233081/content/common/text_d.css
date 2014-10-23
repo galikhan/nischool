@@ -1,0 +1,32 @@
+.text_d{
+	padding: 25px 20px 25px 35px;
+	background: #e6e6e6 url("arr2.png") no-repeat;
+	color: black;
+	margin-top: 20px;
+	font-size:1em;
+}
+
+.text_d .title{
+    color: #000;
+    font-weight: bold;
+    font-size:1em;
+    margin-bottom: 0.6em;
+}
+
+.text_d .pict{
+ 	padding: 0px;
+	background: none;
+}
+    
+.text_d .qp-img-container {
+    margin: 20px 0;
+    position: relative;
+}   
+
+.text_d .qp-img-title {
+    background: none repeat scroll 0 0 transparent;
+    color: #000000;
+    font-weight: bold;
+    padding: 10px 0 0;
+    position: relative;
+}   

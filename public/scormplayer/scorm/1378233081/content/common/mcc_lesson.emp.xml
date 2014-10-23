@@ -1,0 +1,54 @@
+<assessmentItem>		<itemBody>
+
+    <div id="header_all">
+		<div id="cc_header_right">
+        	<div id="cc_header_left">
+        	     <div id="cc_header_navigation">
+        	        
+					<div class="home_button" id="home_button"> <link itemIndex="0"><shape class="btn_home"/></link></div>
+					
+					<pagesSwitchBox id="pagesSwitchBox"/>
+					<div class="switcher" id="switcher">
+        			<pagesSwitchBox id="pagesSwitchBox"/>
+        			
+        		  
+        	</div>
+        </div>
+        	
+        	</div>
+         </div>
+     </div>
+     <div id="cc_header_down">
+      	<div id="cc_header_navigation">
+			<div class="home_button" id="home_button"> <link itemIndex="0"><shape class="btn_home"/></link></div>
+			<div class="switcher" id="switcher">
+        		<pagesSwitchBox id="pagesSwitchBox"/>
+        	</div>
+        </div>
+     </div>
+	 <div class="cf" id="content">
+	 
+	 	
+	 
+		<div id="lesson_title">
+				<div class="lessonTitle"><info class="report-custom1-content0"/></div>
+            </div>
+        	<div class="cf" id="content_in">
+				<pageInPage id="dummy1"/>
+            </div> 
+	  </div>
+	  <div id="footer">
+        		<prevItemNavigation class="navigation_button" id="prevPage"/>
+				<nextItemNavigation class="navigation_button" id="nextPage"/>
+	   </div>
+	   
+	  	  <div id="feedback"> 
+	 				<feedbackAudioMuteButton class="feedback_button" id="feedbackBtn"/>  
+	   	   </div>
+	   
+	   <div id="footer_down">
+ 				<div class="link_button" id="link_button"/>
+	   </div>
+	  
+			</itemBody>
+<styleDeclaration><link href="mcc_lesson.css" userAgent=".*"/><link href="default.css" userAgent=".*"/></styleDeclaration><metaDescription/></assessmentItem>

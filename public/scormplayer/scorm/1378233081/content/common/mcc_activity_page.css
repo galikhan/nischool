@@ -1,0 +1,21 @@
+#pageContainer{
+	min-height: 100px;
+}
+
+#activityButtons{	
+}
+
+#showAnswers{
+	display:inline-block;
+	background-color: #095FA2;
+}
+
+#markAnswers{
+	display:inline-block;
+	background-color: #3FB1FF;
+}
+
+#reset{
+	display:inline-block;
+	background-color: #ffcd1e;
+}

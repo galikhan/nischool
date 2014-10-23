@@ -1,0 +1,72 @@
+/*----table with bottom dotted border------- */
+
+.table{
+	padding: 25px 20px 25px 35px;
+	background: #e6e6e6 url(arr2.png) no-repeat;
+	color: black;
+	margin-top: 20px;
+	font-size: 1em;
+}
+.exer .table,
+.exer_p .table{
+	padding: 0px;
+	background: none;
+	color: black;
+	margin-top: 20px;
+	font-size: 1em;
+}
+/*
+.table .title{
+   	color: #000;
+    font-weight: bold;
+    font-size:1.1em;
+    margin-bottom: 0.6em;
+    }
+ */   
+       
+.exer .table{
+	background: none;
+}
+.table .qp-table-table {
+	border-collapse: collapse;
+	margin-bottom: 20px;
+}
+.table td{
+	border-bottom: 1px solid #aaa;
+/*	border-bottom: 1px dotted #AAAAAA;*/
+}
+.table .qp-table-cell {
+	/*text-align: center;*/
+	padding: 0.7em;
+}
+.table .title{
+    font-weight: bold;
+    font-size:1em;
+    text-align:center;
+}
+.table .col_title{
+    font-weight: bold;
+    /*font-size:1.1em;*/
+    text-align:center;
+}
+.table .align_r{
+    padding: 0px 3em 0px 2em;
+    text-align:right;
+}
+
+.table .align_c{
+    padding: 0px 3em 0px 2em;
+    text-align:center;
+}
+.table .qp-textinteraction .qp-span{
+	/*override*/
+	line-height:normal;
+}
+.table .qp-textinteraction{
+	/*override*/
+	padding:0px;
+}
+.table .align_c{
+    padding: 0px 3em 0px 2em;
+    text-align:center;
+}  

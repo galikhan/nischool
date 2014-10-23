@@ -1,0 +1,434 @@
+<?xml version="1.0" standalone="no"?>
+<manifest identifier="MANIFEST-d82970e0-f6aa-11dc-95ff-0800200c9a66" version="1.0" xmlns="http://www.imsglobal.org/xsd/imscp_v1p1" xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_v1p3" xmlns:adlnav="http://www.adlnet.org/xsd/adlnav_v1p3" xmlns:adlseq="http://www.adlnet.org/xsd/adlseq_v1p3" xmlns:imsss="http://www.imsglobal.org/xsd/imsss" xmlns:lom="http://ltsc.ieee.org/xsd/LOM" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imsglobal.org/xsd/imscp_v1p1 imscp_v1p1.xsd
+                        http://www.adlnet.org/xsd/adlcp_v1p3 adlcp_v1p3.xsd
+                        http://www.adlnet.org/xsd/adlnav_v1p3 adlnav_v1p3.xsd
+                        http://www.adlnet.org/xsd/adlseq_v1p3 adlseq_v1p3.xsd
+                        http://www.imsglobal.org/xsd/imsss imsss_v1p0.xsd
+                        http://ltsc.ieee.org/xsd/LOM lom.xsd">
+	<metadata>
+		<schema>ADL SCORM</schema>
+		<schemaversion>2004 3rd Edition</schemaversion>
+		<lom:lom>
+			<lom:general>
+				<lom:identifier>
+					<lom:catalog>URI</lom:catalog>
+					<lom:entry>urn:absorbonline.com:content:APA:DJFPh054</lom:entry>
+				</lom:identifier>
+				<lom:identifier>
+				   <lom:catalog>UK Curriculum Online</lom:catalog>
+				   <lom:entry>CROC</lom:entry>
+				</lom:identifier>				
+				<lom:title>
+					<lom:string language="en-GB">Moving Wires and Motors</lom:string>
+				</lom:title>
+				<lom:language>en-GB</lom:language>
+				<lom:description>
+					<lom:string language="en-GB">Teaches the motor effect and Fleming's left-hand rule using interactive investigations. Includes information on how motors and loudspeakers work.</lom:string>
+				</lom:description>
+				<lom:keyword>
+					<lom:string language="en-GB">motor</lom:string>
+				</lom:keyword>
+				<lom:keyword>
+					<lom:string language="en-GB">Fleming's left-hand rule</lom:string>
+				</lom:keyword>
+				<lom:keyword>
+					<lom:string language="en-GB">coils</lom:string>
+				</lom:keyword>
+			</lom:general>
+			<lom:lifeCycle>
+				<lom:contribute>
+					<lom:role>
+						<lom:source>LOMv1.0</lom:source>
+						<lom:value>author</lom:value>
+					</lom:role>
+					<lom:entity><![CDATA[
+					BEGIN:VCARD
+					FN:Dr David Fairhurst
+					N:Fairhurst;David;;Dr;
+					VERSION:3.0
+					END:VCARD
+					]]></lom:entity>
+					<lom:date>
+						<lom:dateTime>2008-03-17</lom:dateTime>
+					</lom:date>
+				</lom:contribute>
+				<lom:contribute>
+					<lom:role>
+						<lom:source>LOMv1.0</lom:source>
+						<lom:value>publisher</lom:value>
+					</lom:role>
+					<lom:entity><![CDATA[
+						BEGIN:VCARD
+						FN:Crocodile Clips
+						N:Crocodile Clips;;;;
+						ORG:Crocodile Clips
+						URL:http://www.crocodile-clips.com				
+						VERSION:3.0
+						END:VCARD
+					]]></lom:entity>
+					<lom:date>
+						<lom:dateTime>2008-03-17</lom:dateTime>
+					</lom:date>
+				</lom:contribute>
+			</lom:lifeCycle>
+			<lom:technical>
+				<lom:format>text/html</lom:format>
+				<lom:format>application/x-shockwave-flash</lom:format>
+				<lom:format>application/x-absorb-physics-simulation</lom:format>				
+				<lom:otherPlatformRequirements>
+					<lom:string language="en-GB">Asborb Physics Player</lom:string>
+				</lom:otherPlatformRequirements>
+			</lom:technical>
+			<lom:metaMetadata>
+				<lom:identifier>
+					<lom:catalog>URI</lom:catalog>
+					<lom:entry>urn:absorbonline.com:content:APA:DJFPh054:metadata</lom:entry>
+				</lom:identifier>
+				<lom:contribute>
+					<lom:role>
+						<lom:source>LOMv1.0</lom:source>
+						<lom:value>creator</lom:value>
+					</lom:role>
+					<lom:entity><![CDATA[
+						BEGIN:VCARD
+						FN:Crocodile Clips
+						N:Crocodile Clips;;;;
+						ORG:Crocodile Clips
+						URL:http://www.crocodile-clips.com				
+						VERSION:3.0
+						END:VCARD
+					]]></lom:entity>
+					<lom:date>
+						<lom:dateTime>2008-03-17</lom:dateTime>
+					</lom:date>
+				</lom:contribute>
+				<lom:metadataSchema>LOMv1.0</lom:metadataSchema>
+				<lom:metadataSchema>SCORM_CAM_v1.3</lom:metadataSchema>				
+				<lom:language>en-GB</lom:language>
+			</lom:metaMetadata>
+			<!--
+			<lom:classification>
+				<lom:purpose>
+					<lom:source>LOMv1.0</lom:source>
+					<lom:value>educational objective</lom:value>
+				</lom:purpose>
+				<lom:taxonPath>
+					<lom:source>
+						<lom:string language="none">LTS National Qualifications</lom:string>
+					</lom:source>
+					<lom:taxon>
+						<lom:id>tcm:4-81443</lom:id>
+						<lom:entry>
+							<lom:string language="none">Science (NQ category)</lom:string>
+						</lom:entry>
+					</lom:taxon>
+					<lom:taxon>
+						<lom:id>tcm:4-81491</lom:id>
+						<lom:entry>
+							<lom:string language="none">Chemistry (NQ subject)</lom:string>
+						</lom:entry>
+					</lom:taxon>
+					<lom:taxon>
+						<lom:id>tcm:4-100789</lom:id>
+						<lom:entry>
+							<lom:string language="none">Chemistry - Standard Grade</lom:string>
+						</lom:entry>
+					</lom:taxon>
+					<lom:taxon>
+						<lom:id>tcm:4-370105</lom:id>
+						<lom:entry>
+							<lom:string language="none">Demonstrate abilities in problem solving in Chemistry by handling and processing information</lom:string>
+						</lom:entry>
+					</lom:taxon>
+				</lom:taxonPath>
+			</lom:classification>
+			-->
+			<lom:educational>
+				<lom:intendedEndUserRole>
+					<lom:source>LOMv1.0</lom:source>
+					<lom:value>learner</lom:value>
+				</lom:intendedEndUserRole>
+				<lom:intendedEndUserRole>
+					<lom:source>LOMv1.0</lom:source>
+					<lom:value>teacher</lom:value>
+				</lom:intendedEndUserRole>
+				<!--<lom:context>
+					<lom:source>LOMv1.0</lom:source>
+					<lom:value>Secondary Education</lom:value>
+				</lom:context>-->			
+				<lom:learningResourceType>
+					<lom:source>LOMv1.0</lom:source>
+					<lom:value>exercise</lom:value>
+				</lom:learningResourceType>
+				<lom:learningResourceType>
+					<lom:source>LOMv1.0</lom:source>
+					<lom:value>simulation</lom:value>
+				</lom:learningResourceType>
+				<lom:learningResourceType>
+					<lom:source>LOMv1.0</lom:source>
+					<lom:value>narrative text</lom:value>
+				</lom:learningResourceType>				
+				<lom:typicalLearningTime>
+					<lom:duration>PT00H40M</lom:duration>
+				</lom:typicalLearningTime>
+			</lom:educational>
+			<lom:rights>
+				<lom:copyrightAndOtherRestrictions>
+					<lom:source>LOMv1.0</lom:source>
+					<lom:value>yes</lom:value>
+				</lom:copyrightAndOtherRestrictions>
+				<lom:description>
+					<lom:string language="en">Copyright Crocodile Clips Ltd</lom:string>
+				</lom:description>
+			</lom:rights>
+		</lom:lom>
+	</metadata>
+   <organizations default="DJFPh054_ORG">
+      <organization identifier="DJFPh054_ORG" structure="hierarchical">
+         <title>Moving Wires and Motors</title>
+         <item identifier="DJFPh054_ORG_I" identifierref="DJFPh054_I">
+            <title>Introduction</title>
+         </item>
+         <item identifier="DJFPh054_ORG_S1" identifierref="DJFPh054_S1">
+            <title>The motor effect</title>
+         </item>
+         <item identifier="DJFPh054_ORG_S2" identifierref="DJFPh054_S2">
+            <title>Fleming's left-hand rule</title>
+         </item>
+         <item identifier="DJFPh054_ORG_S3" identifierref="DJFPh054_S3">
+            <title>The moving-coil loudspeaker</title>
+         </item>         
+         <item identifier="DJFPh054_ORG_S4" identifierref="DJFPh054_S4">
+            <title>Coils and motors</title>
+         </item>                  
+         <item identifier="DJFPh054_ORG_S" identifierref="DJFPh054_S">
+            <title>Summary</title>
+         </item>                           
+         <item identifier="DJFPh054_ORG_E" identifierref="DJFPh054_E">
+            <title>Exercises</title>
+         </item>      
+         <imsss:sequencing>
+            <imsss:controlMode flow="true" forwardOnly="false" choice="true" choiceExit="true"/>
+         </imsss:sequencing>
+      </organization>
+   </organizations>
+   <resources>
+      <resource identifier="DJFPh054_I" type="webcontent" adlcp:scormType="asset" href="intro.html">
+        <file href="intro.html"/>
+        <file href="media/DJFPh054coilmotor3.swf" />
+        <file href="media/DJFPh054compass.swf" />
+        <file href="media/DJFPh054ldspkrcircuit.czp" />
+        <file href="media/DJFPh054ldspkrcircuit.gif" />
+        <file href="media/DJFPh054left2.swf" />
+        <file href="media/DJFPh054moteff3.swf" />
+        <file href="style.css"/>
+        <file href="fullscreen.html" />        
+		<file href="jquery-1.2.3.min.js" />
+		<file href="jquery.metadata.min.js" />
+		<file href="jquery.deserialize.js" />
+		<file href="jquery.media.js" />
+		<file href="adapter.js" />
+		<file href="jquery.absorb.js" />
+		<file href="layout/btn-close.gif" />		
+		<file href="layout/fullscreen.png" />		
+		<file href="layout/navnext.png" />			
+		<file href="layout/navnext_h.png" />			
+		<file href="layout/navprev.png" />			
+		<file href="layout/navprev_h.png" />									
+		<file href="layout/check.gif" />			
+		<file href="layout/correct.gif" />									
+		<file href="layout/incorrect.gif" />		
+		<file href="layout/btndwn.gif" />
+		<file href="layout/btnup.gif" />
+		<file href="layout/close.png" />
+		<file href="layout/pdf.png" />
+		<file href="layout/popimg.gif" />
+      </resource>
+      <resource identifier="DJFPh054_S1" type="webcontent" adlcp:scormType="asset" href="s1.html">
+        <file href="s1.html"/>
+        <file href="media/DJFPh054coilmotor3.swf" />
+        <file href="media/DJFPh054compass.swf" />
+        <file href="media/DJFPh054ldspkrcircuit.czp" />
+        <file href="media/DJFPh054ldspkrcircuit.gif" />
+        <file href="media/DJFPh054left2.swf" />
+        <file href="media/DJFPh054moteff3.swf" />
+        <file href="style.css"/>
+        <file href="fullscreen.html" />                
+		<file href="jquery-1.2.3.min.js" />
+		<file href="jquery.metadata.min.js" />
+		<file href="jquery.deserialize.js" />
+		<file href="jquery.media.js" />
+		<file href="adapter.js" />
+		<file href="jquery.absorb.js" />
+		<file href="layout/btn-close.gif" />		
+		<file href="layout/fullscreen.png" />		
+		<file href="layout/navnext.png" />			
+		<file href="layout/navnext_h.png" />			
+		<file href="layout/navprev.png" />			
+		<file href="layout/navprev_h.png" />									
+		<file href="layout/check.gif" />			
+		<file href="layout/correct.gif" />									
+		<file href="layout/incorrect.gif" />		
+		<file href="layout/btndwn.gif" />
+		<file href="layout/btnup.gif" />
+		<file href="layout/close.png" />
+		<file href="layout/pdf.png" />
+		<file href="layout/popimg.gif" />
+      </resource>
+      <resource identifier="DJFPh054_S2" type="webcontent" adlcp:scormType="asset" href="s2.html">
+        <file href="s2.html"/>
+        <file href="media/DJFPh054coilmotor3.swf" />
+        <file href="media/DJFPh054compass.swf" />
+        <file href="media/DJFPh054ldspkrcircuit.czp" />
+        <file href="media/DJFPh054ldspkrcircuit.gif" />
+        <file href="media/DJFPh054left2.swf" />
+        <file href="media/DJFPh054moteff3.swf" />
+        <file href="style.css"/>
+        <file href="fullscreen.html" />                
+		<file href="jquery-1.2.3.min.js" />
+		<file href="jquery.metadata.min.js" />
+		<file href="jquery.deserialize.js" />
+		<file href="jquery.media.js" />
+		<file href="adapter.js" />
+		<file href="jquery.absorb.js" />
+		<file href="layout/btn-close.gif" />		
+		<file href="layout/fullscreen.png" />		
+		<file href="layout/navnext.png" />			
+		<file href="layout/navnext_h.png" />			
+		<file href="layout/navprev.png" />			
+		<file href="layout/navprev_h.png" />									
+		<file href="layout/check.gif" />			
+		<file href="layout/correct.gif" />									
+		<file href="layout/incorrect.gif" />	     
+		<file href="layout/btndwn.gif" />
+		<file href="layout/btnup.gif" />
+		<file href="layout/close.png" />
+		<file href="layout/pdf.png" />
+		<file href="layout/popimg.gif" />
+      </resource>     
+      <resource identifier="DJFPh054_S3" type="webcontent" adlcp:scormType="asset" href="s3.html">
+        <file href="s3.html"/>
+        <file href="media/DJFPh054coilmotor3.swf" />
+        <file href="media/DJFPh054compass.swf" />
+        <file href="media/DJFPh054ldspkrcircuit.czp" />
+        <file href="media/DJFPh054ldspkrcircuit.gif" />
+        <file href="media/DJFPh054left2.swf" />
+        <file href="media/DJFPh054moteff3.swf" />
+        <file href="style.css"/>
+        <file href="fullscreen.html" />                
+		<file href="jquery-1.2.3.min.js" />
+		<file href="jquery.metadata.min.js" />
+		<file href="jquery.deserialize.js" />
+		<file href="jquery.media.js" />
+		<file href="adapter.js" />
+		<file href="jquery.absorb.js" />
+		<file href="layout/btn-close.gif" />		
+		<file href="layout/fullscreen.png" />		
+		<file href="layout/navnext.png" />			
+		<file href="layout/navnext_h.png" />			
+		<file href="layout/navprev.png" />			
+		<file href="layout/navprev_h.png" />									
+		<file href="layout/check.gif" />			
+		<file href="layout/correct.gif" />									
+		<file href="layout/incorrect.gif" />	    
+		<file href="layout/btndwn.gif" />
+		<file href="layout/btnup.gif" />
+		<file href="layout/close.png" />
+		<file href="layout/pdf.png" />
+		<file href="layout/popimg.gif" />
+     </resource>      
+      <resource identifier="DJFPh054_S4" type="webcontent" adlcp:scormType="asset" href="s4.html">
+        <file href="s4.html"/>
+        <file href="media/DJFPh054coilmotor3.swf" />
+        <file href="media/DJFPh054compass.swf" />
+        <file href="media/DJFPh054ldspkrcircuit.czp" />
+        <file href="media/DJFPh054ldspkrcircuit.gif" />
+        <file href="media/DJFPh054left2.swf" />
+        <file href="media/DJFPh054moteff3.swf" />
+        <file href="style.css"/>
+        <file href="fullscreen.html" />                
+		<file href="jquery-1.2.3.min.js" />
+		<file href="jquery.metadata.min.js" />
+		<file href="jquery.deserialize.js" />
+		<file href="jquery.media.js" />
+		<file href="adapter.js" />
+		<file href="jquery.absorb.js" />
+		<file href="layout/btn-close.gif" />		
+		<file href="layout/fullscreen.png" />		
+		<file href="layout/navnext.png" />			
+		<file href="layout/navnext_h.png" />			
+		<file href="layout/navprev.png" />			
+		<file href="layout/navprev_h.png" />									
+		<file href="layout/check.gif" />			
+		<file href="layout/correct.gif" />									
+		<file href="layout/incorrect.gif" />	      
+		<file href="layout/btndwn.gif" />
+		<file href="layout/btnup.gif" />
+		<file href="layout/close.png" />
+		<file href="layout/pdf.png" />
+		<file href="layout/popimg.gif" />
+      </resource>  
+      <resource identifier="DJFPh054_S" type="webcontent" adlcp:scormType="asset" href="summary.html">
+        <file href="summary.html"/>
+        <file href="media/DJFPh054coilmotor3.swf" />
+        <file href="media/DJFPh054compass.swf" />
+        <file href="media/DJFPh054ldspkrcircuit.czp" />
+        <file href="media/DJFPh054ldspkrcircuit.gif" />
+        <file href="media/DJFPh054left2.swf" />
+        <file href="media/DJFPh054moteff3.swf" />
+        <file href="style.css"/>
+        <file href="fullscreen.html" />                
+		<file href="jquery-1.2.3.min.js" />
+		<file href="jquery.metadata.min.js" />
+		<file href="jquery.deserialize.js" />
+		<file href="jquery.media.js" />
+		<file href="adapter.js" />
+		<file href="jquery.absorb.js" />
+		<file href="layout/btn-close.gif" />		
+		<file href="layout/fullscreen.png" />		
+		<file href="layout/navnext.png" />			
+		<file href="layout/navnext_h.png" />			
+		<file href="layout/navprev.png" />			
+		<file href="layout/navprev_h.png" />									
+		<file href="layout/check.gif" />			
+		<file href="layout/correct.gif" />									
+		<file href="layout/incorrect.gif" />	     
+		<file href="layout/btndwn.gif" />
+		<file href="layout/btnup.gif" />
+		<file href="layout/close.png" />
+		<file href="layout/pdf.png" />
+		<file href="layout/popimg.gif" />
+      </resource>        
+      <resource identifier="DJFPh054_E" type="webcontent" adlcp:scormType="asset" href="exercises.html">
+        <file href="exercises.html"/>
+        <file href="media/DJFPh054coilmotor3.swf" />
+        <file href="media/DJFPh054compass.swf" />
+        <file href="media/DJFPh054ldspkrcircuit.czp" />
+        <file href="media/DJFPh054ldspkrcircuit.gif" />
+        <file href="media/DJFPh054left2.swf" />
+        <file href="media/DJFPh054moteff3.swf" />
+        <file href="style.css"/>
+        <file href="fullscreen.html" />                
+		<file href="jquery-1.2.3.min.js" />
+		<file href="jquery.metadata.min.js" />
+		<file href="jquery.deserialize.js" />
+		<file href="jquery.media.js" />
+		<file href="adapter.js" />
+		<file href="jquery.absorb.js" />
+		<file href="layout/btn-close.gif" />		
+		<file href="layout/fullscreen.png" />		
+		<file href="layout/navnext.png" />			
+		<file href="layout/navnext_h.png" />			
+		<file href="layout/navprev.png" />			
+		<file href="layout/navprev_h.png" />									
+		<file href="layout/check.gif" />			
+		<file href="layout/correct.gif" />									
+		<file href="layout/incorrect.gif" />	   
+		<file href="layout/btndwn.gif" />
+		<file href="layout/btnup.gif" />
+		<file href="layout/close.png" />
+		<file href="layout/pdf.png" />
+		<file href="layout/popimg.gif" />
+      </resource>                  
+    </resources>
+</manifest>

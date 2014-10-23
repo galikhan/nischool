@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+	    <title>Fullscreen</title>
+	    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	    <script language="JavaScript" type="text/javascript" src="jquery-1.2.3.min.js"></script>
+	    <script language="JavaScript" type="text/javascript" src="jquery.media.js"></script>
+		<style type="text/css">
+			html, body
+			{
+				margin: 0;
+				padding: 0;
+				background-color: white;
+			}
+
+			.media
+			{
+				text-align: center;
+				margin: 0 auto;
+			}
+
+			.mediacont
+			{
+				background-color: white;
+			}
+
+			div.toolbar
+			{
+				width: 100%;
+				position: absolute;
+				bottom: 0px;
+				padding: 3px 0px 3px 0px;
+				font-size: 14px;
+				background-color: #F6F7F2;
+				border-top: 1px solid #DDE5C2;
+				font-weight: bold;
+				margin-bottom: 3px;
+			}
+
+			div.toolbar span.close
+			{
+				float: right;
+				cursor: pointer;
+				padding-right: 10px;
+			}
+
+			div.toolbar span.close img
+			{
+				vertical-align: middle;
+			}
+
+			div.toolbar span.title
+			{
+				padding-left: 10px;
+			}
+		</style>
+		<script type="text/javascript">
+			$(document).ready(
+				function()
+				{
+					var params = getQs();
+					$('.title').text( params.title );
+					document.title = params.title;
+					var d = dimensions( $(window).width() - 25, $(window).height() - 50, params.w, params.h );
+					$('.media').media( { src: params.src, width: d.w, height: d.h, autoplay: true, params: { loop: "true" } } );
+				}
+			);
+
+			function dimensions( maxw, maxh, mediaw, mediah )
+			{
+				var dim = new Object();
+				var r = mediaw / mediah;
+
+				if( r > 1 )
+				{
+					dim.w = maxw;
+					dim.h = dim.w / r;
+
+					if( dim.h > maxh )
+					{
+						var dy = dim.h - maxh;
+						dim.w = dim.w - (dy / r);
+						dim.h = maxh;
+					}
+				}
+				else
+				{
+					dim.h = maxh;
+					dim.w = dim.h * r;
+
+					if( dim.w > maxw )
+					{
+						var dx = dim.w - maxw;
+						dim.h = dim.h - (dx / r);
+						dim.w = maxw;
+					}
+				}
+
+				return dim;
+			}
+
+			function getQs()
+			{
+				var params = {};
+				var qs = window.location.href;
+				if( qs )
+				{
+                	qs = qs.substring( qs.indexOf('?')+1 );
+                	qs = qs.replace(/\&$/, '');
+                    jQuery.each(
+                    	qs.split('&'),
+                    	function()
+                    	{
+                        	var pair = this.split('=');
+                        	params[pair[0]] = unescape( pair[1] );
+                    	}
+                    );
+                }
+                return params;
+            };
+		</script>
+	</head>
+	<body>
+		<div class="popupcontent">
+			<div class="mediacont">
+				<a class="media">&#160;</a>
+			</div>
+			<div class="toolbar">
+				<span class="close" onclick="self.close()">Close Window <img src="layout/btn-close.gif" /></span>
+				<span class="title">Title</span>
+			</div>
+		</div>
+	</body>
+</html>

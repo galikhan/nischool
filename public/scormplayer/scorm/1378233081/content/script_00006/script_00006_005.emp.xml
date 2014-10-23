@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><assessmentItem adaptive="false" compilerVersion="3.3.2.78" identifier="ITEM_005" playerVersion="1.8.0" timeDependent="false" title="Кіндік тамыр жүйесі">
+<styleDeclaration><link href="../common/mcc_lesson.css" userAgent=".*"/><link href="../common/mcc_media_page.css" userAgent=".*"/><link href="../common/default.css" userAgent=".*"/><link href="../common/text_d.css" userAgent=".*"/><link href="../common/pict.css" userAgent=".*"/></styleDeclaration>
+	<variableProcessing template="default"/>
+		<outcomeDeclaration cardinality="single" identifier="DONE"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DONEHISTORY"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DONECHANGES"/>
+		<outcomeDeclaration cardinality="single" identifier="LASTMISTAKEN"/>
+		<outcomeDeclaration cardinality="single" identifier="CHECKS"/>
+		<outcomeDeclaration cardinality="single" identifier="SHOW_ANSWERS"/>
+		<outcomeDeclaration cardinality="single" identifier="RESET"/>
+		<outcomeDeclaration cardinality="single" identifier="MISTAKES"/>
+	<outcomeDeclaration cardinality="single" identifier="TODO">
+		<defaultValue>
+			<value>0</value>
+		</defaultValue>
+	</outcomeDeclaration>
+		<itemBody>
+
+		<div class="mcc_media_page">
+				<div class="page_title">
+					<div class="pageicon"/>
+					<div class="pagetitle"><info class="report-custom1-content2"/></div>
+       			</div>
+            <group class="text_d" id="dummy1">
+	<div id="text_d">
+		<simpleText id="dummy1_1">
+Кіндік тамыр жүйесі негізгі және жанама тамырлардан тұрады, мысалы, бұршақ тұқымдастардың, қарағайлардың тамырлары.</simpleText>
+		<!-- cannot find module for dummy 'dummy2'!-->
+		<!-- cannot find module for dummy 'dummy3'!-->
+		<!-- cannot find module for dummy 'dummy4'!-->
+		<!-- cannot find module for dummy 'dummy5'!-->
+		<!-- cannot find module for dummy 'dummy6'!-->
+		<!-- cannot find module for dummy 'dummy7'!-->
+		<!-- cannot find module for dummy 'dummy8'!-->
+		<!-- cannot find module for dummy 'dummy9'!-->
+		<!-- cannot find module for dummy 'dummy10'!-->
+		</div>
+</group>
+            <group class="pict" id="dummy2">
+	<div id="pict">
+			<img id="dummy2_1" src="media/mcc_bl_ls_04_06_04i.jpg">
+</img>
+			<!-- cannot find module for dummy 'dummy2'!-->
+			<!-- cannot find module for dummy 'dummy3'!-->
+			<!-- cannot find module for dummy 'dummy4'!-->
+			<!-- cannot find module for dummy 'dummy5'!-->
+			<!-- cannot find module for dummy 'dummy6'!-->
+			<!-- cannot find module for dummy 'dummy7'!-->
+			<!-- cannot find module for dummy 'dummy8'!-->
+			<!-- cannot find module for dummy 'dummy9'!-->
+			<!-- cannot find module for dummy 'dummy10'!-->
+		</div>
+</group>
+            <!-- cannot find module for dummy 'dummy3'!-->
+            <!-- cannot find module for dummy 'dummy4'!-->
+            <!-- cannot find module for dummy 'dummy5'!-->
+            <!-- cannot find module for dummy 'dummy6'!-->
+            <!-- cannot find module for dummy 'dummy7'!-->
+            <!-- cannot find module for dummy 'dummy8'!-->
+            <!-- cannot find module for dummy 'dummy9'!-->
+            <!-- cannot find module for dummy 'dummy10'!-->
+        </div>
+			</itemBody>
+</assessmentItem>

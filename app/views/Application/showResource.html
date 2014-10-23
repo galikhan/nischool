@@ -1,0 +1,50 @@
+#{extends 'main.html' /}
+#{set title:'fullResource' /}
+ 
+#{displayFull resource:resource /}
+<br>
+<hr>
+#{if flash.success}
+<p class="success">${flash.success}</p>
+#{/if}
+<div class="row">
+    <div class="col-md-10 col-md-offset-1" id="make-review">
+        <div class="form-horizontal">
+            #{form @Application.resourceComment(resource.id)}
+                #{ifErrors}
+                    <p class="error">
+                        ${errors[0]}
+                    </p>
+                #{/ifErrors}
+                <div class="control-group">
+                    <label class="control-label" for="inputName">Имя<span class="text-error">*</span></label>
+                    <div class="controls">
+                      <input type="text" name="author" id="inputName" value="${params.author}">
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="inputReview">Комментарий<span class="text-error">*</span></label>
+                    <div class="controls">
+                      <textarea name="content" id="inputReview" >${params.content}</textarea>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <!--<label class="control-label" for="code">Please type the code below: <span class="text-error">*</span></label>-->
+                    <!--<div class="controls">-->
+                        <!--<img src="@{Application.captcha(randomID)}" /> <br />-->
+                      <!--<input type="text" name="code" id="inputName" placeholder="Enter Code..." value="">-->
+                      <!--<input type="hidden" name="randomID" value="${randomID}" />-->
+                    <!--</div>-->
+                </div>
+                <div class="control-group">
+                    <div class="controls">
+                      <button type="submit" class="btn btn-primary" name="submit">Отправить</button>
+                    </div>
+                </div>
+            #{/form}
+        </div>
+    </div>
+</div>
+
+

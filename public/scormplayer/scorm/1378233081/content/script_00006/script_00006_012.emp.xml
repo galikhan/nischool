@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><assessmentItem adaptive="false" compilerVersion="3.3.2.78" identifier="ITEM_012" playerVersion="1.8.0" timeDependent="false" title="Тест">
+<styleDeclaration><link href="../common/mcc_lesson.css" userAgent=".*"/><link href="../common/mcc_activity_page.css" userAgent=".*"/><link href="../common/default.css" userAgent=".*"/><link href="../common/exer.css" userAgent=".*"/></styleDeclaration>
+	<variableProcessing template="default"/>
+		<outcomeDeclaration cardinality="single" identifier="DONE"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DONEHISTORY"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DONECHANGES"/>
+		<outcomeDeclaration cardinality="single" identifier="LASTMISTAKEN"/>
+		<outcomeDeclaration cardinality="single" identifier="CHECKS"/>
+		<outcomeDeclaration cardinality="single" identifier="SHOW_ANSWERS"/>
+		<outcomeDeclaration cardinality="single" identifier="RESET"/>
+		<outcomeDeclaration cardinality="single" identifier="MISTAKES"/>
+	<outcomeDeclaration cardinality="single" identifier="TODO">
+		<defaultValue>
+			<value>5</value>
+		</defaultValue>
+	</outcomeDeclaration>
+
+		<outcomeDeclaration cardinality="single" identifier="CHOICE_RESPONSE_1-DONE"/>
+		<outcomeDeclaration cardinality="single" identifier="CHOICE_RESPONSE_1-TODO"/>
+		<outcomeDeclaration cardinality="single" identifier="CHOICE_RESPONSE_1-LASTCHANGE"/>
+		<outcomeDeclaration cardinality="single" identifier="CHOICE_RESPONSE_1-PREVIOUS"/>
+		<outcomeDeclaration cardinality="single" identifier="CHOICE_RESPONSE_1-LASTMISTAKEN"/>
+		<outcomeDeclaration cardinality="multiple" identifier="CHOICE_RESPONSE_1-DONEHISTORY"/>
+		<outcomeDeclaration cardinality="multiple" identifier="CHOICE_RESPONSE_1-DONECHANGES"/>
+		<outcomeDeclaration cardinality="single" identifier="CHOICE_RESPONSE_1-MISTAKES"/>
+				<responseDeclaration cardinality="single" checkMode="default" countMode="single" identifier="CHOICE_RESPONSE_1">
+					<correctResponse>
+						<value>CHOICE_RESPONSE_1_0</value>
+					</correctResponse>
+				</responseDeclaration>
+
+		<outcomeDeclaration cardinality="single" identifier="CHOICE_RESPONSE_2-DONE"/>
+		<outcomeDeclaration cardinality="single" identifier="CHOICE_RESPONSE_2-TODO"/>
+		<outcomeDeclaration cardinality="single" identifier="CHOICE_RESPONSE_2-LASTCHANGE"/>
+		<outcomeDeclaration cardinality="single" identifier="CHOICE_RESPONSE_2-PREVIOUS"/>
+		<outcomeDeclaration cardinality="single" identifier="CHOICE_RESPONSE_2-LASTMISTAKEN"/>
+		<outcomeDeclaration cardinality="multiple" identifier="CHOICE_RESPONSE_2-DONEHISTORY"/>
+		<outcomeDeclaration cardinality="multiple" identifier="CHOICE_RESPONSE_2-DONECHANGES"/>
+		<outcomeDeclaration cardinality="single" identifier="CHOICE_RESPONSE_2-MISTAKES"/>
+				<responseDeclaration cardinality="single" checkMode="default" countMode="single" identifier="CHOICE_RESPONSE_2">
+					<correctResponse>
+						<value>CHOICE_RESPONSE_2_0</value>
+					</correctResponse>
+				</responseDeclaration>
+
+		<outcomeDeclaration cardinality="single" identifier="CHOICE_RESPONSE_3-DONE"/>
+		<outcomeDeclaration cardinality="single" identifier="CHOICE_RESPONSE_3-TODO"/>
+		<outcomeDeclaration cardinality="single" identifier="CHOICE_RESPONSE_3-LASTCHANGE"/>
+		<outcomeDeclaration cardinality="single" identifier="CHOICE_RESPONSE_3-PREVIOUS"/>
+		<outcomeDeclaration cardinality="single" identifier="CHOICE_RESPONSE_3-LASTMISTAKEN"/>
+		<outcomeDeclaration cardinality="multiple" identifier="CHOICE_RESPONSE_3-DONEHISTORY"/>
+		<outcomeDeclaration cardinality="multiple" identifier="CHOICE_RESPONSE_3-DONECHANGES"/>
+		<outcomeDeclaration cardinality="single" identifier="CHOICE_RESPONSE_3-MISTAKES"/>
+				<responseDeclaration cardinality="single" checkMode="default" countMode="single" identifier="CHOICE_RESPONSE_3">
+					<correctResponse>
+						<value>CHOICE_RESPONSE_3_2</value>
+					</correctResponse>
+				</responseDeclaration>
+
+		<outcomeDeclaration cardinality="single" identifier="CHOICE_RESPONSE_4-DONE"/>
+		<outcomeDeclaration cardinality="single" identifier="CHOICE_RESPONSE_4-TODO"/>
+		<outcomeDeclaration cardinality="single" identifier="CHOICE_RESPONSE_4-LASTCHANGE"/>
+		<outcomeDeclaration cardinality="single" identifier="CHOICE_RESPONSE_4-PREVIOUS"/>
+		<outcomeDeclaration cardinality="single" identifier="CHOICE_RESPONSE_4-LASTMISTAKEN"/>
+		<outcomeDeclaration cardinality="multiple" identifier="CHOICE_RESPONSE_4-DONEHISTORY"/>
+		<outcomeDeclaration cardinality="multiple" identifier="CHOICE_RESPONSE_4-DONECHANGES"/>
+		<outcomeDeclaration cardinality="single" identifier="CHOICE_RESPONSE_4-MISTAKES"/>
+				<responseDeclaration cardinality="single" checkMode="default" countMode="single" identifier="CHOICE_RESPONSE_4">
+					<correctResponse>
+						<value>CHOICE_RESPONSE_4_1</value>
+					</correctResponse>
+				</responseDeclaration>
+
+		<outcomeDeclaration cardinality="single" identifier="CHOICE_RESPONSE_5-DONE"/>
+		<outcomeDeclaration cardinality="single" identifier="CHOICE_RESPONSE_5-TODO"/>
+		<outcomeDeclaration cardinality="single" identifier="CHOICE_RESPONSE_5-LASTCHANGE"/>
+		<outcomeDeclaration cardinality="single" identifier="CHOICE_RESPONSE_5-PREVIOUS"/>
+		<outcomeDeclaration cardinality="single" identifier="CHOICE_RESPONSE_5-LASTMISTAKEN"/>
+		<outcomeDeclaration cardinality="multiple" identifier="CHOICE_RESPONSE_5-DONEHISTORY"/>
+		<outcomeDeclaration cardinality="multiple" identifier="CHOICE_RESPONSE_5-DONECHANGES"/>
+		<outcomeDeclaration cardinality="single" identifier="CHOICE_RESPONSE_5-MISTAKES"/>
+				<responseDeclaration cardinality="single" checkMode="default" countMode="single" identifier="CHOICE_RESPONSE_5">
+					<correctResponse>
+						<value>CHOICE_RESPONSE_5_3</value>
+					</correctResponse>
+				</responseDeclaration>
+		<itemBody>
+
+		<div class="mcc_activity_page">
+				<div class="page_title">
+					<div class="pageicon"/>
+					<div class="pagetitle"><info class="report-custom1-content2"/></div>
+       			</div>			
+            <group class="exer" id="dummy1">
+	<div id="activities">
+		<simpleText class="title" id="dummy1_1">
+Төменде көрсетілген сұрақтардың бір дұрыс жауабын таңдаңыз.</simpleText>
+		<simpleText id="dummy1_2">
+ 
+<br/>
+________ – бұл тамыр эпидермисі, тамырдың терең бөліктерін қорғайды.</simpleText>
+		<choiceInteraction id="dummy1_3" maxChoices="1" responseIdentifier="CHOICE_RESPONSE_1" shuffle="false">
+	<simpleChoice identifier="CHOICE_RESPONSE_1_0">Эпиблема	</simpleChoice>
+	<simpleChoice identifier="CHOICE_RESPONSE_1_1">Флоэма	</simpleChoice>
+	<simpleChoice identifier="CHOICE_RESPONSE_1_2">Қыртыс	</simpleChoice>
+	<simpleChoice identifier="CHOICE_RESPONSE_1_3">Ксилема	</simpleChoice>
+	<feedbacks>
+		<feedback>
+			<condition>
+				<and>
+		<propertyCondition property="ok"/>
+				</and>
+			</condition>
+		<action>
+			<showText/>
+				<showUrl href="media/ok.mp3" type="narration">
+								<source src="media/ok.mp3" type="audio/mp4"/>
+				</showUrl>
+		</action>
+		</feedback>
+		<feedback>
+			<condition>
+				<and>
+		<propertyCondition property="wrong"/>
+				</and>
+			</condition>
+		<action>
+			<showText/>
+				<showUrl href="media/wrong.mp3" type="narration">
+								<source src="media/wrong.mp3" type="audio/mp4"/>
+				</showUrl>
+		</action>
+		</feedback>
+	</feedbacks>
+</choiceInteraction>
+		<simpleText id="dummy1_4">
+ 
+<br/>
+Кіндік тамыр жүйесі неден тұрады?</simpleText>
+		<choiceInteraction id="dummy1_5" maxChoices="1" responseIdentifier="CHOICE_RESPONSE_2" shuffle="false">
+	<simpleChoice identifier="CHOICE_RESPONSE_2_0">Негізгі тамыр және жанама тамырлардан	</simpleChoice>
+	<simpleChoice identifier="CHOICE_RESPONSE_2_1">Негізгі тамырдан	</simpleChoice>
+	<simpleChoice identifier="CHOICE_RESPONSE_2_2">Біркелкі тамырлардан	</simpleChoice>
+	<simpleChoice identifier="CHOICE_RESPONSE_2_3">Жанама тамырлардан	</simpleChoice>
+	<feedbacks>
+		<feedback>
+			<condition>
+				<and>
+		<propertyCondition property="ok"/>
+				</and>
+			</condition>
+		<action>
+			<showText/>
+				<showUrl href="media/ok.mp3" type="narration">
+								<source src="media/ok.mp3" type="audio/mp4"/>
+				</showUrl>
+		</action>
+		</feedback>
+		<feedback>
+			<condition>
+				<and>
+		<propertyCondition property="wrong"/>
+				</and>
+			</condition>
+		<action>
+			<showText/>
+				<showUrl href="media/wrong.mp3" type="narration">
+								<source src="media/wrong.mp3" type="audio/mp4"/>
+				</showUrl>
+		</action>
+		</feedback>
+	</feedbacks>
+</choiceInteraction>
+		<simpleText id="dummy1_6">
+ 
+<br/>
+Сәбіз тамыры қандай типті?</simpleText>
+		<choiceInteraction id="dummy1_7" maxChoices="1" responseIdentifier="CHOICE_RESPONSE_3" shuffle="false">
+	<simpleChoice identifier="CHOICE_RESPONSE_3_0">Мұртша	</simpleChoice>
+	<simpleChoice identifier="CHOICE_RESPONSE_3_1">Тіреу тамыр	</simpleChoice>
+	<simpleChoice identifier="CHOICE_RESPONSE_3_2">Жемтамыр	</simpleChoice>
+	<simpleChoice identifier="CHOICE_RESPONSE_3_3">Жер асты тамыры	</simpleChoice>
+	<feedbacks>
+		<feedback>
+			<condition>
+				<and>
+		<propertyCondition property="ok"/>
+				</and>
+			</condition>
+		<action>
+			<showText/>
+				<showUrl href="media/ok.mp3" type="narration">
+								<source src="media/ok.mp3" type="audio/mp4"/>
+				</showUrl>
+		</action>
+		</feedback>
+		<feedback>
+			<condition>
+				<and>
+		<propertyCondition property="wrong"/>
+				</and>
+			</condition>
+		<action>
+			<showText/>
+				<showUrl href="media/wrong.mp3" type="narration">
+								<source src="media/wrong.mp3" type="audio/mp4"/>
+				</showUrl>
+		</action>
+		</feedback>
+	</feedbacks>
+</choiceInteraction>
+		<simpleText id="dummy1_8">
+ 
+<br/>
+Кіндік тамырлы түрге төмендегілердің қайсысы мысал бола алады?</simpleText>
+		<choiceInteraction id="dummy1_9" maxChoices="1" responseIdentifier="CHOICE_RESPONSE_4" shuffle="false">
+	<simpleChoice identifier="CHOICE_RESPONSE_4_0">Сәбіз	</simpleChoice>
+	<simpleChoice identifier="CHOICE_RESPONSE_4_1">Асбұршақ және қарағай	</simpleChoice>
+	<simpleChoice identifier="CHOICE_RESPONSE_4_2">Сарымсақ	</simpleChoice>
+	<simpleChoice identifier="CHOICE_RESPONSE_4_3">Бидай	</simpleChoice>
+	<feedbacks>
+		<feedback>
+			<condition>
+				<and>
+		<propertyCondition property="ok"/>
+				</and>
+			</condition>
+		<action>
+			<showText/>
+				<showUrl href="media/ok.mp3" type="narration">
+								<source src="media/ok.mp3" type="audio/mp4"/>
+				</showUrl>
+		</action>
+		</feedback>
+		<feedback>
+			<condition>
+				<and>
+		<propertyCondition property="wrong"/>
+				</and>
+			</condition>
+		<action>
+			<showText/>
+				<showUrl href="media/wrong.mp3" type="narration">
+								<source src="media/wrong.mp3" type="audio/mp4"/>
+				</showUrl>
+		</action>
+		</feedback>
+	</feedbacks>
+</choiceInteraction>
+		<simpleText id="dummy1_10">
+ 
+<br/>
+Төмендегілердің қайсысы тамырдың қызметіне жатпайды?</simpleText>
+		<choiceInteraction id="dummy1_11" maxChoices="1" responseIdentifier="CHOICE_RESPONSE_5" shuffle="false">
+	<simpleChoice identifier="CHOICE_RESPONSE_5_0">Тірек қызметі	</simpleChoice>
+	<simpleChoice identifier="CHOICE_RESPONSE_5_1">Оттегін сіңіру	</simpleChoice>
+	<simpleChoice identifier="CHOICE_RESPONSE_5_2">Сақтау	</simpleChoice>
+	<simpleChoice identifier="CHOICE_RESPONSE_5_3">Жиырылу	</simpleChoice>
+	<feedbacks>
+		<feedback>
+			<condition>
+				<and>
+		<propertyCondition property="ok"/>
+				</and>
+			</condition>
+		<action>
+			<showText/>
+				<showUrl href="media/ok.mp3" type="narration">
+								<source src="media/ok.mp3" type="audio/mp4"/>
+				</showUrl>
+		</action>
+		</feedback>
+		<feedback>
+			<condition>
+				<and>
+		<propertyCondition property="wrong"/>
+				</and>
+			</condition>
+		<action>
+			<showText/>
+				<showUrl href="media/wrong.mp3" type="narration">
+								<source src="media/wrong.mp3" type="audio/mp4"/>
+				</showUrl>
+		</action>
+		</feedback>
+	</feedbacks>
+</choiceInteraction>
+        <!-- cannot find module for dummy 'dummy12'!-->
+        <!-- cannot find module for dummy 'dummy13'!-->
+		<!-- cannot find module for dummy 'dummy14'!-->
+        <!-- cannot find module for dummy 'dummy15'!-->
+        <!-- cannot find module for dummy 'dummy16'!-->
+		<!-- cannot find module for dummy 'dummy17'!-->
+        <!-- cannot find module for dummy 'dummy18'!-->
+        <!-- cannot find module for dummy 'dummy19'!-->
+		<!-- cannot find module for dummy 'dummy20'!-->
+        <!-- cannot find module for dummy 'dummy21'!-->
+        <!-- cannot find module for dummy 'dummy22'!-->
+		<!-- cannot find module for dummy 'dummy23'!-->
+        <!-- cannot find module for dummy 'dummy24'!-->
+        <!-- cannot find module for dummy 'dummy25'!-->
+	</div>
+	<div id="activityButtons">
+        <markAllButton id="markAnswers"/>
+        <showAnswersButton id="showAnswers"/>
+        <resetButton id="reset"/>
+    </div>
+</group>
+            <!-- cannot find module for dummy 'dummy2'!-->
+            <!-- cannot find module for dummy 'dummy3'!-->
+            <!-- cannot find module for dummy 'dummy4'!-->
+            <!-- cannot find module for dummy 'dummy5'!-->
+            <!-- cannot find module for dummy 'dummy6'!-->
+            <!-- cannot find module for dummy 'dummy7'!-->
+            <!-- cannot find module for dummy 'dummy8'!-->
+            <!-- cannot find module for dummy 'dummy9'!-->
+            <!-- cannot find module for dummy 'dummy10'!-->
+        </div>
+			</itemBody>
+</assessmentItem>
