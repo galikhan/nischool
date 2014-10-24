@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<cardset>
+ <color>f2ecfd</color>
+ <correctsound>correct.mp3</correctsound>
+<largetext>false</largetext>
+ <wrongsound>wrong.mp3</wrongsound>
+ <value>6</value>
+ <valueText>Value:</valueText>
+ <scoreText>Score</scoreText>
+ <resetText>Re-start</resetText>
+ <cat1>they%27re</cat1>
+ <cat2>their</cat2>
+ <cat3>there</cat3>
+ <card value='1'>
+  <cat>1</cat>
+  <image></image>
+  <title></title>
+  <title2></title2>
+  <text>Today+___+very+happy.</text>
+ </card>
+ <card value='2'>
+  <cat>2</cat>
+  <image></image>
+  <title></title>
+  <title2></title2>
+  <text>I+see+___+friends+are+there.</text>
+ </card>
+ <card value='3'>
+  <cat>3</cat>
+  <image></image>
+  <title></title>
+  <title2></title2>
+  <text>It+seems+that+___+are+many+people+here.</text>
+ </card>
+ <card value='4'>
+  <cat>2</cat>
+  <image></image>
+  <title></title>
+  <title2></title2>
+  <text>I+saw+___+bicyle.</text>
+ </card>
+ <card value='5'>
+  <cat>3</cat>
+  <image></image>
+  <title></title>
+  <title2></title2>
+  <text>I+saw+them+over___.</text>
+ </card>
+ <card value='6'>
+  <cat>3</cat>
+  <image></image>
+  <title></title>
+  <title2></title2>
+  <text>I+see+their+friends+are+___.</text>
+ </card>
+</cardset>

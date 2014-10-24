@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<draglabel>
+<value>3</value>
+<valueText>Value:</valueText>
+<scoreText>Score</scoreText>
+<resetText>Re-start</resetText>
+<correctsound>correct.mp3</correctsound>
+<wrongsound>wrong.mp3</wrongsound>
+<image>lessonimages/labelingImage5.png</image>
+     <imagex>20</imagex>
+     <imagey>160</imagey>
+     <color>f2ecfd</color>
+     <linecolor>0x000000</linecolor>
+     <lineweight>1</lineweight>
+     <correctsound>correct.mp3</correctsound>
+     <wrongsound>wrong.mp3</wrongsound>
+     <labelset name='1'>
+          <name>they're</name>
+          <labx>398</labx>
+          <laby>246</laby>
+          <dotx>404</dotx>
+          <doty>203</doty>
+          <cornerx>469</cornerx>
+          <cornery>246</cornery>
+     </labelset>
+     <labelset name='2'>
+          <name>their</name>
+          <labx>228</labx>
+          <laby>246</laby>
+          <dotx>207</dotx>
+          <doty>203</doty>
+          <cornerx>228</cornerx>
+          <cornery>246</cornery>
+     </labelset>
+     <labelset name='3'>
+          <name>there</name>
+          <labx>43</labx>
+          <laby>247</laby>
+          <dotx>159</dotx>
+          <doty>203</doty>
+          <cornerx>114</cornerx>
+          <cornery>247</cornery>
+     </labelset>
+</draglabel>
