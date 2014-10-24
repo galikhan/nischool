@@ -1,4 +1,63 @@
-#{extends 'Admin/admin.html' /}
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>Админка</title>
+        <!-- Bootstrap -->
+        <link href="@{'/public/AdminBootstrap/bootstrap/css/bootstrap.min.css'}" rel="stylesheet" media="screen">
+        <link href="@{'/public/AdminBootstrap/bootstrap/css/bootstrap-responsive.min.css'}" rel="stylesheet" media="screen">
+        <link href="@{'/public/AdminBootstrap/assets/styles.css'}" rel="stylesheet" media="screen">
+        <link href="@{'/public/AdminBootstrap/assets/DT_bootstrap.css'}" rel="stylesheet" media="screen">
+        <!--[if lte IE 8]><script language="javascript" type="text/javascript" src="vendors/flot/excanvas.min.js"></script><![endif]-->
+        <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+            <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <script src="@{'/public/AdminBootstrap/vendors/modernizr-2.6.2-respond-1.1.0.min.js'}"></script>
+        <script src="@{'/public/AdminBootstrap/vendors/jquery-1.9.1.js'}"></script>
+        <script src="@{'/public/AdminBootstrap/bootstrap/js/bootstrap.min.js'}"></script>
+        <script src="@{'/public/AdminBootstrap/vendors/datatables/js/jquery.dataTables.min.js'}"></script>
+
+
+        <script src="@{'/public/AdminBootstrap/assets/scripts.js'}"></script>
+        <script src="@{'/public/AdminBootstrap/assets/DT_bootstrap.js'}"></script>
+        
+        <link href="@{'/public/AdminBootstrap/vendors/datepicker.css'}" rel="stylesheet" media="screen">
+        <link href="@{'/public/AdminBootstrap/vendors/uniform.default.css'}" rel="stylesheet" media="screen">
+        <link href="@{'/public/AdminBootstrap/vendors/chosen.min.css'}" rel="stylesheet" media="screen">
+
+        <link href="@{'/public/AdminBootstrap/vendors/wysiwyg/bootstrap-wysihtml5.css'}" rel="stylesheet" media="screen">
+
+        <script src="@{'/public/AdminBootstrap/vendors/jquery.uniform.min.js'}"></script>
+        <script src="@{'/public/AdminBootstrap/vendors/chosen.jquery.min.js'}"></script>
+        <script src="@{'/public/AdminBootstrap/vendors/bootstrap-datepicker.js'}"></script>
+
+        <script src="@{'/public/AdminBootstrap/vendors/wysiwyg/wysihtml5-0.3.0.js'}"></script>
+        <script src="@{'/public/AdminBootstrap/vendors/wysiwyg/bootstrap-wysihtml5.js'}"></script>
+
+        <script src="@{'/public/AdminBootstrap/vendors/wizard/jquery.bootstrap.wizard.min.js'}"></script>
+
+		<script type="text/javascript" src="@{'/public/AdminBootstrap/vendors/jquery-validation/dist/jquery.validate.min.js'}"></script>
+		<script src="@{'/public/AdminBootstrap/assets/form-validation.js'}"></script>
+        
+    </head>
+    
+    <body>
+        <div class="container-fluid" style="margin-top: -50px;">
+            <div class="row-fluid">
+                <!--/span-->
+                <div class="span9" id="content" style="width: 50%;">
+
+                     <div class="row-fluid">
+                        <!-- block -->
+                        <div class="block">
+                            <div class="navbar navbar-inner block-header">
+							      <a href="@{Admin.admin()}"><button class="btn">Таблица </button></a>
+							      <a href="@{Admin.addResource()}"><button class="btn">Создать ЦОР </button></a>
+                            </div>
+                            <div class="block-content collapse in">
+                                <div class="span12">
+
 
 <!-- BEGIN FORM-->
 #{form @Admin.addResource(), enctype:'multipart/form-data'}
@@ -15,77 +74,68 @@
 		</div>
 
 			<div class="control-group">
-				<label class="control-label">Наименование <span class="required">*</span></label>
-			    <div class="controls">
-			      <input type="text" name="title" placeholder="Наименование ЦОРа" value="${params.title}"  class="span6 m-wrap">
-			    </div>
+				<input type="text" name="title" placeholder="Название" value="${params.title}" class="span6 m-wrap"> Название
 			</div>
 			
 			<div class="control-group">
-				<label class="control-label">Хэштеги <span class="required">*</span></label>
-			    <div class="controls">
-			      <input type="text" name="keywords" placeholder="Ключевые слова" value="${params.keywords}" class="span6 m-wrap">
-			    </div>
+			      <input type="text" name="author" placeholder="Имя Фамилия" value="${params.author}" class="span6 m-wrap"> Автор
 			</div>
 			
 			<div class="control-group">
-				<label class="control-label">Автор <span class="required">*</span></label>
-			    <div class="controls">
-			      <input type="text" name="author" placeholder="Имя Фамилия" value="${params.author}" class="span6 m-wrap">
-			    </div>
+			      <textarea name="description" placeholder="Текст" value="${params.description}" class="span6 m-wrap"></textarea> Описание
 			</div>
 			
 			<div class="control-group">
-				<label class="control-label">Описание <span class="required">*</span></label>
-			    <div class="controls">
-			      <textarea name="description" placeholder="Текст..." value="${params.description}" class="span6 m-wrap"></textarea>
-			    </div>
+			      <input type="text" name="keywords" placeholder="Теги" value="${params.keywords}" class="span6 m-wrap"> Хэштеги
 			</div>
 			
 			<div class="control-group">
-				<label class="control-label">Тип <span class="text-error">*</span></label>
-			    <div class="controls">
 			      <select class="span6 m-wrap" name="contentType" value="${params.contentType}">
 						<option value="SCORM"> SCORM </option>
 						<option value="Видео"> Видео </option>
 						<option value="Аудио"> Аудио </option>
-			      </select>
-			    </div>
+			      </select> Формат
 			</div>
 			
 			<div class="control-group">
-				<label class="control-label">Категория <span class="required">*</span></label>
-			    <div class="controls">
 			      <select class="span6 m-wrap" name="categoryId" value="${params.categoryId}">
 					#{list items:categories, as:'category'}
 						<option value="${category.id}">
 							${category.id} - ${category.name}
 						</option>
 					#{/list}
-			      </select>
-			    </div>
+			      </select> Категория
 			</div>
 			
 			<div class="control-group">
-				<label class="control-label">Язык <span class="required">*</span></label>
-			    <div class="controls">
 			      <select class="span6 m-wrap" name="languageId" value="${params.languageId}">
 					#{list items:languages, as:'language'}
 						<option value="${language.id}">
 							${language.id} - ${language.languageName}
 						</option>
 					#{/list}
-			      </select>
-			    </div>
+			      </select> Язык
 			</div>
 			<div>
-			   Загрузить обложку <input type="file" name="poster"><br />
-			   Загрузить ЦОР <input type="file" name="cor">
+			   <input type="file" name="poster"> Обложка<br />
+			   <input type="file" name="cor"> ЦОР(*.zip)
 			</div>
 
-			<div class="form-actions">
-				<button type="submit" class="btn btn-primary">Добавить ЦОР</button>
-			</div>
+			<button type="submit" class="btn" style="float: right;">Создать</button>
 	</fieldset>
 #{/form}
 <!-- END FORM-->
+
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /block -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--/.fluid-container-->
+    </body>
+
+</html>

@@ -19,33 +19,8 @@ import play.mvc.Controller;
 public class Admin extends Controller {
 	
     public static void admin(){
-    	List<Category> categories = Category.findAll();
-    	render(categories);
-    }
-    
-    public static void listCategories(){
-    	List<Category> categories = Category.findAll();
-    	render(categories);
-    }
-    
-    public static void listResources(){
     	List<Resource> resources = Resource.findAll();
     	render(resources);
-    }
-    
-    public static void listLanguages(){
-    	List<Language> languages = Language.findAll();
-    	render(languages);
-    }
-    
-    public static void addCategory(@Required(message="Name is required") String name, Long parentId){
-    	
-        if(validation.hasErrors()) {
-        	List<Category> categories = Category.findAll();
-            render("Admin/addCategory.html", categories);
-        }
-    	new Category(name, parentId).save();
-    	listCategories();
     }
     
     public static void addResource(@Required(message="title is required") String title,
@@ -86,63 +61,13 @@ public class Admin extends Controller {
 			cor.renameTo(new File("public/media-content/" + resource.id + "/" + resource.corName));
 			resource.save();
 		}
-		listResources();
-    }
-    
-    public static void addLanguage(@Required(message="Id is required") Long languageId,
-    		@Required(message="Name is required") String languageName){
-    	
-        if(validation.hasErrors()) {
-            render("Admin/addLanguage.html");
-        }
-
-    	System.out.println(languageId + languageName);
-    	Language lang = Language.findById(languageId);
-    	if(lang == null){
-    		new Language(languageId, languageName).save();
-    	}
-    	listLanguages();
-    }
-    
-    public static void editCategory(Long id){
-    	render();
-    }
-    
-    public static void editResource(Long id){
-    	render();
-    }
-    
-    public static void editLanguage(@Required(message="Id is required") Long languageId, @Required(message="Name is required") String languageName){
-    	System.out.println(languageId + languageName);
-    	Language language = Language.findById(languageId);
-    	if(languageName == null){
-    		render();
-    	}
-    	else{
-	    	language.id = languageId;
-	    	language.languageName = languageName;
-	    	language._save();
-	    	listLanguages();
-    	}
-    }
-    
-    public static void deleteCategory(Long id){
-    	Category category = Category.findById(id);
-    	category._delete();
-    	listCategories();
+		admin();
     }
     
     public static void deleteResource(long id) {
  	   final Resource resource = Resource.findById(id);
  	   resource.delete();
- 	   listResources();
-    }
-    
-    public static void deleteLanguage(Long id){
-    	Language language = Language.findById(id);
-
-    	language._delete();
-    	listLanguages();
+ 	   admin();
     }
     
 
